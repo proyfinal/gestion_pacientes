@@ -1,0 +1,14 @@
+﻿{
+  "Name": "100HM1",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "so3ONQW1Sku_-p3nDJUHfw",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/so3ONQW1Sku_-p3nDJUHfw",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/0I9o3mDtX0eDV674RZjprw",
+  "Created": "2025-06-14T14:28:11.2689759Z",
+  "Updated": "2025-06-14T14:28:11.2689759Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

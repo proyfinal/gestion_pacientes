@@ -112,9 +112,10 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable11</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,668.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="921.2,952" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_pacientes" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
@@ -126,6 +127,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Recordad: Volver al dashboard en cada secuencia." />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="extraer_datos - Invoke Workflow File (extraer_datos.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="extraer_datos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_pass">[pass]</OutArgument>
@@ -142,8 +144,10 @@
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//A partir de aqui, ya está la sesión iniciada y preparada para meter datos. Dejar en este estado cada  vez que se termina una acción." />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="crear_paciente - Invoke Workflow File (crear_paciente.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="crear_paciente.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="crear_paciente - Invoke Workflow File (crear_paciente.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="crear_paciente.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_id_pacientes">[dt_pacientes]</OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_pacientes">[dt_pacientes]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_adjunto">[dt_pacientes.Rows(2)("Adjunto").ToString()]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_phone">[dt_pacientes.Rows(2)("Teléfono").ToString()]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_email">[dt_pacientes.Rows(2)("Correo").ToString()]</InArgument>
@@ -154,6 +158,11 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_first_name">[dt_pacientes.Rows(2)("Nombre").ToString()]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_register_url">[dt_config.Rows(2)("VALUE").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_dashboard_url">[dt_config.Rows(1)("VALUE").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="visit_note - Invoke Workflow File (visit_note.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="visit_note.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

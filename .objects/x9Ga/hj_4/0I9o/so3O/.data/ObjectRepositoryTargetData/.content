@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="So1S2VoL3kO1XBzNwlwxtg" Reference="yo6pYHpOtEys6_EC7ZMvHA/so3ONQW1Sku_-p3nDJUHfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/coreapps/clinicianfacing/patient.page" CVScreenId="abe48a1d-f74f-44bc-a3fe-0e068cfbc087" DesignTimeRectangle="1485, 304, 78, 29" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='content' tag='DIV' innertext='             Patient ID                              *                      ' /&gt;&lt;webctrl aaname='*' parentid='content' tag='SPAN' /&gt;" Guid="0aa5991b-1b55-44e1-bdbe-a8a7f99c19ee" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="abe48a1d-f74f-44bc-a3fe-0e068cfbc087" DesignTimeRectangle="1327, 304, 150, 28" FuzzySelectorArgument="&lt;webctrl type='' parentid='content' tag='EM' class='' aaname='Patient ID' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Patient ID' /&gt;" Guid="fbc2e323-5b35-441a-a225-37c99aa5f3dc" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6a0c0a0b8eccb5d5c9328d7c39f835b4.png" xmlns="">0Jnxp97hSwEqa-i3-mWA1zw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

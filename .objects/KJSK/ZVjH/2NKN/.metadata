@@ -1,0 +1,13 @@
+﻿{
+  "Name": "catastro_performer_01",
+  "Type": "Screen",
+  "Id": "2NKNFrO21kWn1RlPLsEAOw",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/2NKNFrO21kWn1RlPLsEAOw",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/ZVjHo3DaXEK_PqrHsqLRww",
+  "Created": "2025-06-14T16:53:06.5365257Z",
+  "Updated": "2025-06-14T16:53:06.5365257Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
