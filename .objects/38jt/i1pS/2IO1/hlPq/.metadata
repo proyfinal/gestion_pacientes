@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Register a patient",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "hlPqBh3yjkiN4kaGzVWO6A",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/hlPqBh3yjkiN4kaGzVWO6A",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/2IO1Z0UfpUGFz7yuFgH2lA",
+  "Created": "2025-06-14T11:29:05.7653663Z",
+  "Updated": "2025-06-14T11:29:05.7653663Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

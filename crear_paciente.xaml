@@ -1,0 +1,587 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="crear_paciente" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_adjunto" Type="InArgument(x:String)" />
+    <x:Property Name="in_phone" Type="InArgument(x:String)" />
+    <x:Property Name="in_email" Type="InArgument(x:String)" />
+    <x:Property Name="in_direccion" Type="InArgument(x:String)" />
+    <x:Property Name="in_birth" Type="InArgument(x:String)" />
+    <x:Property Name="in_genero" Type="InArgument(x:String)" />
+    <x:Property Name="in_last_name" Type="InArgument(x:String)" />
+    <x:Property Name="in_first_name" Type="InArgument(x:String)" />
+    <x:Property Name="in_register_url" Type="InArgument(x:String)" />
+    <x:Property Name="in_dashboard_url" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>crear_paciente_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable11</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="crear_paciente" sap:VirtualizedContainerService.HintSize="925.2,8115.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="byear" />
+      <Variable x:TypeArguments="x:String" Name="bmonth" />
+      <Variable x:TypeArguments="x:String" Name="bday" />
+      <Variable x:TypeArguments="x:Int32" Name="count">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="571.2,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Navegar a crear paciente." />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Home" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="571.2,528.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1c24c435-bd72-4e45-9e90-58bed70dd315" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,280" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register a patient'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1c24c435-bd72-4e45-9e90-58bed70dd315" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/index.htm" CVScreenId="5122543c-38fe-47b9-90f1-928f0956d040" ContentHash="Dfj8qy8rf0CFrGnZBmJpPg" DesignTimeRectangle="1326, 326, 208, 162" ElementType="Text" FullSelectorArgument="&lt;webctrl id='referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension' tag='A' /&gt;" Guid="72f1568a-2fc8-49f4-aa98-329aa8d0c2d4" InformativeScreenshot="043ab626c35a2a853b3bbfbe146a87a5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/hlPqBh3yjkiN4kaGzVWO6A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="y5RYfdbjK0aVc0z6thdZOg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAC/klEQVQ4T23STUgUUQAH8H9EHdJK02dZGvb6IOiSFETZN3WpDLVtx3Ys2tWnVmb2QUaspDSraLW0zmaLhpXR+GZb+0CL8hYEUaciOhR06tQXOztbW5o18XS29tDhD3OY/4/3/jyUOm/jhWcjflXnwmRUJN9k9IjJ6IDJ6HOT0Wcmo7rJaK3JaI74x3LPw3DDaqCrA3BKYbS4fDDYIiTYfMTYwoDJqPW/xBit/15VgChbiI1tdUCwDZAlDSXOu2hytSPOKH5U5/fahVGT0bcmo+/ssjXmyT8RrypAUXs90HUOUJUJoEK6OY54XR2IswWXv7KCPpPR5Sajc0xGc01G145V5g3eOra+cYn/NHCpfaJsA7NkSfO7pP5rO5xDV4f3l221qmcn9/gbyz13stfrKEfoYhiqwqEqbVCVqQJwy5JmieyR+JAsaZMDFSdh1WSK00yUK/PwsWYRZgaa0xD0vYSqWHbWCeCGDfyWJW2DwxlBVXkvruw9jJh7CUYr8/CwYQ3KfDVAsFUc25MCNAlg2Aa+yJJWIPYolzgcjjt4eWwFVvoaMEmsnRxNVValAN0CeGQDUVnSqBh1W/ED9Jw6iDeRPAT7NmFqsAUIXAA62wRQlAKEBNCT3ECWtO3S7jB89V68ChViLJIGKzwN928Uwt1dgcVdxwG19WgKcEIAjiRQvlt/6pavT/l0cx5GItMR5TmIcoJRPWMccvfsmY3Oc+/tcgKqUiiANFnSal3O/uaS0nutj/1bpJGB9GkGJ0gmxrPxk2fkeHuLPej0e8fHU5V9UJVJ/x5SyT2cOXgWiUiGGuPZTwxOHAYnSw1OlhmceOI863WcZzeuD9UBgfP/HtKustvYWTKIpgM+RPtz8C2cGTQ4sewkDE5+iO8oJ9aInnkyqhMUhQ4BAT/Q2QG01DXj/NFGfNZyRVncuSUFSM1YlJPKhD4LH/rnoLR7PzaHaoHRgXSMDKTD1LOSd84wOJENTnoNToYNTh4anFw2OCk2OBnfJs6z8FufAUufgT+mbrwfWRx0CwAAAABJRU5ErkJggg==" InformativeScreenshot="d8187be258668ab49998058bf18031af.jpg" Reference="yo6pYHpOtEys6_EC7ZMvHA/2IO1Z0UfpUGFz7yuFgH2lA" Selector="&lt;html app='msedge.exe' title='Home' /&gt;" Url="[in_dashboard_url]" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="571.2,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Añadimos registro." />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="571.2,7387.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="537.6,7147.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_3" Text="// Subventana1: Nombre y Apellido" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Given (required)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_first_name]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="0415ec46-1e02-459d-b8d6-1223d1eb963d" ContentHash="frJxi-QET0mhLbgRS2MHuQ" DesignTimeRectangle="662, 476, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="3cf86942-c7e8-4d98-8e5c-fc0659a8b75f" InformativeScreenshot="995a4643c1d5c84d107d7d67b987d4b9.png" IsResponsive="True" Reference="yo6pYHpOtEys6_EC7ZMvHA/ZomEmW-Q_EmSK-fMRRaJSA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="0415ec46-1e02-459d-b8d6-1223d1eb963d" DesignTimeRectangle="662, 424, 248, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='         Given      ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Given (required)' /&gt;" Guid="2a7c0990-854c-453d-a555-0ed9184c3fdf" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Family Name (required)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_last_name]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="c554b2ab-c902-4c22-a0fe-e066276217b9" ContentHash="18eHkC7b802eAS7NR22RBw" DesignTimeRectangle="1183, 476, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='familyName' tag='INPUT' /&gt;" Guid="c06fa8ce-bdea-469a-8ff4-5ac2e54dc30d" InformativeScreenshot="64239d45b8cedab5a0ce6d81bd800a1b.png" IsResponsive="True" Reference="yo6pYHpOtEys6_EC7ZMvHA/1o9Tjn9Wf0OZlZlpi1l9Sg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c554b2ab-c902-4c22-a0fe-e066276217b9" CvTextArea="1182, 434, 241, 28" CvTextArgument="Family Name (required)" CvType="Text" DesignTimeRectangle="1183, 424, 248, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='         Family Name      ' tag='LABEL' /&gt;" Guid="5e7140bb-d2c0-483f-9566-c2b0b11915dd" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" InformativeScreenshot="3ed14d967eb0b5096154a14795e1bea5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/7cRc3ZJtB02WY2LS0nsGVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Evaluar Género." />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[in_genero]" />
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,108" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// Nota: Hacer evento hardware para click desplegable." />
+            <If Condition="[in_genero = &quot;V&quot;]" sap:VirtualizedContainerService.HintSize="504,692" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Male'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,216.8" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb293242-0e5d-4c0b-bd5c-b9cf2eecd9d1" ContentHash="9Oj4-Q1TkUWGIgXZDKqpiQ" DesignTimeRectangle="676, 429, 204, 28" FullSelectorArgument="&lt;webctrl id='gender-field' tag='SELECT' /&gt;&lt;webctrl tag='OPTION' aaname='Male' /&gt;" Guid="f280d70f-14ef-4387-ac8d-21f9c16cd193" ImageBase64="" InformativeScreenshot="27a5c8a2c977edcef637ab2ca723f365.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/-_60US2szUOkdrfAokzOLQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Female'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382.4,216.8" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="4e89b065-1b15-4fe1-b688-1afb0a0f643e" ContentHash="ZWn2MzXR-02SVRQtsnOM7A" DesignTimeRectangle="676, 457, 204, 29" FullSelectorArgument="&lt;webctrl id='gender-field' tag='SELECT' /&gt;&lt;webctrl aaname='Female' tag='OPTION' /&gt;" Guid="e85d8f34-b0be-4aa4-a0d6-7338c00a6044" InformativeScreenshot="cd25acfa38183500615db661f85d6f62.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/kt9FsX-5FkWCK4cW38c_6Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="3fea9191-ed00-4dc2-95ee-99c4f524ef4a" ContentHash="hnXBANvvfUmr-xauY-wgew" DesignTimeRectangle="1498, 514, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="2a5dfe88-b7c5-46f2-b966-440094a4f4ae" InformativeScreenshot="1ea18a7b809dd3bffc406cf6a1cd862d.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/UM7g3UWdn0O7Nbq5zlDh7w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_6" Text="//Introducir fecha nacimiento." />
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,127.2" sap2010:WorkflowViewState.IdRef="Comment_7" Text="// Hay que dividir (Split) la fecha de nacimineto en tres params: bday,bmonth y byear para correcta introducción." />
+            <Assign sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[byear]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[in_birth.Split("-"c)(2).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[bmonth]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[in_birth.Split("-"c)(1).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[bday]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[in_birth.Split("-"c)(0).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_8" Text="// Escribimos los datos." />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT birthdateDay-field'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[bday]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="f73af2f3-d1f0-43d3-a1ca-eda9d5c22d7e" ContentHash="gkbo31GEh0-wFtICH2FSGg" CvElementArea="659, 476, 95, 45" CvType="InputBox" DesignTimeRectangle="662, 478, 90, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='birthdateDay-field' tag='INPUT' /&gt;" Guid="e36d84a3-a4cd-4e73-948e-e28f7e6ed82d" InformativeScreenshot="08c19a5fc1bdc702ca5a9bb7741ea71a.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/jEilfb5cV0G-VtVWj_8OkA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,127.2" sap2010:WorkflowViewState.IdRef="Comment_9" Text="// Aquí, hay que gestionar la selección de mes en base a numerales, ya que no se puede escribir." />
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Month (required)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="0c0a9220-c76c-4ef2-9ac9-c3504676b370" ContentHash="HpSSrEg6LE2No2KNxJAtXg" CvElementArea="810, 476, 255, 47" CvType="InputBox" DesignTimeRectangle="812, 478, 250, 43" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='birthdateMonth-field' tag='SELECT' /&gt;" Guid="013ae7e0-1c5d-4076-9eba-63a771b4c193" InformativeScreenshot="e3c8d7f0b77eb02a4ad13f6300192cf6.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/Ha3RnP2nIEe_ostbD2Fj7g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="0c0a9220-c76c-4ef2-9ac9-c3504676b370" DesignTimeRectangle="812, 426, 250, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='birthdateMonth' tag='LABEL' /&gt;" Guid="a2302191-ff2e-4a97-8c89-f7a514fc32ad" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Assign sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">0</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:IfElseIfV2 Condition="[bmonth = &quot;Jan&quot;]" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="504,1006.4" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+              <ui:IfElseIfV2.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="502.4,227.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="468.8,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;Test&quot;]" />
+                </Sequence>
+              </ui:IfElseIfV2.Else>
+              <ui:IfElseIfV2.ElseIfs>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True" />
+              </ui:IfElseIfV2.ElseIfs>
+              <ui:IfElseIfV2.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502.4,592.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[count &lt; 1]" DisplayName="While" sap:VirtualizedContainerService.HintSize="468.8,532.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                    <ui:InterruptibleWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,411.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[count + 1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,237.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(down)][u(hk)]" Version="V4">
+                          <uix:NKeyboardShortcuts.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NKeyboardShortcuts.VerifyOptions>
+                        </uix:NKeyboardShortcuts>
+                      </Sequence>
+                    </ui:InterruptibleWhile.Body>
+                  </ui:InterruptibleWhile>
+                </Sequence>
+              </ui:IfElseIfV2.Then>
+            </ui:IfElseIfV2>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_11" Text="// Fin de evaluación de meses" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Year (required)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[byear]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="82537445-7f4b-461c-ba5f-16d20302ef11" ContentHash="QswAGvaAOUKD4oMU4fSjQw" CvElementArea="1072, 475, 95, 45" CvType="InputBox" DesignTimeRectangle="1075, 478, 90, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='birthdateYear-field' tag='INPUT' /&gt;" Guid="a9affbb6-4e0c-4dcd-af31-4b3661f290ee" InformativeScreenshot="946bbf3ccd5e904b015c3f9d86aca309.png" IsResponsive="True" Reference="yo6pYHpOtEys6_EC7ZMvHA/GiXZgqj3xESuJvU2QhQNlQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="82537445-7f4b-461c-ba5f-16d20302ef11" CvTextArea="1072, 437, 148, 25" CvTextArgument="Year (required)" CvType="Text" DesignTimeRectangle="1075, 426, 145, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='         Year      ' parentid='demographics-birthdate' tag='LABEL' /&gt;" Guid="d2d5c415-af3a-4455-8e0f-62096d10b563" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" InformativeScreenshot="3ed14d967eb0b5096154a14795e1bea5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/7cRc3ZJtB02WY2LS0nsGVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_12" Text="// Subventana 2: Contacto" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT address1'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_direccion]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="f39606a9-4612-4386-ac80-8d3f16b01d8a" ContentHash="43tfsWCjfU-R_O1bCRQgXA" CvElementArea="660, 473, 460, 44" CvType="InputBox" DesignTimeRectangle="662, 474, 457, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='address1' tag='INPUT' /&gt;" Guid="8cbdc70b-d8e3-4ccb-99d2-f5ad4c01bf46" InformativeScreenshot="eead2ab17bc8dd891100f07effffbb87.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/6dzOrfS0mkux6wP6fQOWzQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT address2'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_email]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="f39606a9-4612-4386-ac80-8d3f16b01d8a" ContentHash="52DN8L29O0yU6PIziyAktQ" DesignTimeRectangle="662, 577, 457, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='address2' tag='INPUT' /&gt;" Guid="fbcc5d08-760f-421d-8d2d-6f7c74537981" InformativeScreenshot="d5267afbf7f1a1f76912b6c16ba31937.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/Gx-6GMz1fUqDZ5kppVCCnw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" InformativeScreenshot="3ed14d967eb0b5096154a14795e1bea5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/7cRc3ZJtB02WY2LS0nsGVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT fr1444-field'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_phone]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="941bb74f-6d1c-4cbd-ac0d-070a6c4c1666" ContentHash="hkvAwRNna0S3MHWxtlALAA" DesignTimeRectangle="662, 420, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='phoneNumber' tag='INPUT' type='text' /&gt;" Guid="1651f97a-2b75-4b75-9f27-20923f09b9aa" InformativeScreenshot="80334ba92ade268271cab638f93fd5c2.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/_JPMb6tHJkK13y0QBhimUw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" InformativeScreenshot="3ed14d967eb0b5096154a14795e1bea5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/7cRc3ZJtB02WY2LS0nsGVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Text="[in_adjunto]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="52ae55e2-5dfe-4d1f-83d1-524788b7be06" ContentHash="q7JQabmGSE-oIu7DTwuuQQ" DesignTimeRectangle="952, 420, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl parentid='relationship' tag='INPUT' type='text' /&gt;" Guid="6f3f1114-2be1-46d8-95e1-bf3a67164871" InformativeScreenshot="04bdf522c82a5b3e1c6f3fa3fc525d12.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/qmJNwLKjm0WE_8DU6Z9_eA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON next-button'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,218.4" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" InformativeScreenshot="3ed14d967eb0b5096154a14795e1bea5.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/7cRc3ZJtB02WY2LS0nsGVQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="QZ3sJi6PAkeMMuoSoQGzoA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAC/klEQVQ4T23STUgUUQAH8H9EHdJK02dZGvb6IOiSFETZN3WpDLVtx3Ys2tWnVmb2QUaspDSraLW0zmaLhpXR+GZb+0CL8hYEUaciOhR06tQXOztbW5o18XS29tDhD3OY/4/3/jyUOm/jhWcjflXnwmRUJN9k9IjJ6IDJ6HOT0Wcmo7rJaK3JaI74x3LPw3DDaqCrA3BKYbS4fDDYIiTYfMTYwoDJqPW/xBit/15VgChbiI1tdUCwDZAlDSXOu2hytSPOKH5U5/fahVGT0bcmo+/ssjXmyT8RrypAUXs90HUOUJUJoEK6OY54XR2IswWXv7KCPpPR5Sajc0xGc01G145V5g3eOra+cYn/NHCpfaJsA7NkSfO7pP5rO5xDV4f3l221qmcn9/gbyz13stfrKEfoYhiqwqEqbVCVqQJwy5JmieyR+JAsaZMDFSdh1WSK00yUK/PwsWYRZgaa0xD0vYSqWHbWCeCGDfyWJW2DwxlBVXkvruw9jJh7CUYr8/CwYQ3KfDVAsFUc25MCNAlg2Aa+yJJWIPYolzgcjjt4eWwFVvoaMEmsnRxNVValAN0CeGQDUVnSqBh1W/ED9Jw6iDeRPAT7NmFqsAUIXAA62wRQlAKEBNCT3ECWtO3S7jB89V68ChViLJIGKzwN928Uwt1dgcVdxwG19WgKcEIAjiRQvlt/6pavT/l0cx5GItMR5TmIcoJRPWMccvfsmY3Oc+/tcgKqUiiANFnSal3O/uaS0nutj/1bpJGB9GkGJ0gmxrPxk2fkeHuLPej0e8fHU5V9UJVJ/x5SyT2cOXgWiUiGGuPZTwxOHAYnSw1OlhmceOI863WcZzeuD9UBgfP/HtKustvYWTKIpgM+RPtz8C2cGTQ4sewkDE5+iO8oJ9aInnkyqhMUhQ4BAT/Q2QG01DXj/NFGfNZyRVncuSUFSM1YlJPKhD4LH/rnoLR7PzaHaoHRgXSMDKTD1LOSd84wOJENTnoNToYNTh4anFw2OCk2OBnfJs6z8FufAUufgT+mbrwfWRx0CwAAAABJRU5ErkJggg==" InformativeScreenshot="90ebd628a16ed12dc90430939a5c6039.jpg" Reference="yo6pYHpOtEys6_EC7ZMvHA/0I9o3mDtX0eDV674RZjprw" Selector="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" Url="[in_register_url]" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

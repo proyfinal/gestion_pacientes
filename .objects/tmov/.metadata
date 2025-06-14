@@ -1,0 +1,12 @@
+﻿{
+  "Name": "NVIDIA GeForce Overlay",
+  "Type": "App",
+  "Id": "tmov_EPsO0uLKA-7-eHg1Q",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/tmov_EPsO0uLKA-7-eHg1Q",
+  "Created": "2025-06-14T11:33:11.0558551Z",
+  "Updated": "2025-06-14T11:33:11.0558551Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

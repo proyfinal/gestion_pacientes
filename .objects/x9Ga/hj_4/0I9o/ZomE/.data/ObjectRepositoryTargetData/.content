@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="frJxi-QET0mhLbgRS2MHuQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="0415ec46-1e02-459d-b8d6-1223d1eb963d" DesignTimeRectangle="662, 476, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" Guid="3cf86942-c7e8-4d98-8e5c-fc0659a8b75f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0415ec46-1e02-459d-b8d6-1223d1eb963d" DesignTimeRectangle="662, 424, 248, 45" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='         Given      ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Given (required)' /&gt;" Guid="2a7c0990-854c-453d-a555-0ed9184c3fdf" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="995a4643c1d5c84d107d7d67b987d4b9.png" xmlns="">0k4fG02DwKEGEHQXrbvzdvA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

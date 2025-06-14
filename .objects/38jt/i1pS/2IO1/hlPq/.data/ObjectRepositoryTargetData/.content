@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Dfj8qy8rf0CFrGnZBmJpPg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/index.htm" CVScreenId="5122543c-38fe-47b9-90f1-928f0956d040" DesignTimeRectangle="1326, 326, 208, 162" ElementType="Text" FullSelectorArgument="&lt;webctrl id='referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension' tag='A' /&gt;" Guid="72f1568a-2fc8-49f4-aa98-329aa8d0c2d4" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="043ab626c35a2a853b3bbfbe146a87a5.png" xmlns="">07POqecixGUGMN223Xf0hjg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

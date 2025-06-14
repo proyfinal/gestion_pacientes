@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="HpSSrEg6LE2No2KNxJAtXg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="0c0a9220-c76c-4ef2-9ac9-c3504676b370" CvElementArea="810, 476, 255, 47" CvType="InputBox" DesignTimeRectangle="812, 478, 250, 43" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='birthdateMonth-field' tag='SELECT' /&gt;" Guid="013ae7e0-1c5d-4076-9eba-63a771b4c193" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0c0a9220-c76c-4ef2-9ac9-c3504676b370" DesignTimeRectangle="812, 426, 250, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='birthdateMonth' tag='LABEL' /&gt;" Guid="a2302191-ff2e-4a97-8c89-f7a514fc32ad" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e3c8d7f0b77eb02a4ad13f6300192cf6.png" xmlns="">0rI1kSZf6RUGJpSrZVHCsBg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

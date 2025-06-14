@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hkvAwRNna0S3MHWxtlALAA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="941bb74f-6d1c-4cbd-ac0d-070a6c4c1666" DesignTimeRectangle="662, 420, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='phoneNumber' tag='INPUT' type='text' /&gt;" Guid="1651f97a-2b75-4b75-9f27-20923f09b9aa" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="80334ba92ade268271cab638f93fd5c2.png" xmlns="">001s7e1AuGkC_KlGN9Bc5Vg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

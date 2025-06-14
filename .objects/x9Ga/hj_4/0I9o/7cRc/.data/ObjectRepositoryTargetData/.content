@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OYF5cuOfIkiLEj0ouBqbxQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="cb6fcdea-9483-4292-8462-9448345f746d" DesignTimeRectangle="1498, 601, 65, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='next-button' tag='BUTTON' /&gt;" Guid="dfdc7ea4-79ce-4099-bd81-0e7f365c556a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="3ed14d967eb0b5096154a14795e1bea5.png" xmlns="">00NomWUT-QUqmZEFhYW2I7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

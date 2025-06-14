@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge OpenMRS Electronic Medical Record",
+  "Type": "App",
+  "Id": "x9Ga7OW3GUyAUvECtFBbBw",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/x9Ga7OW3GUyAUvECtFBbBw",
+  "Created": "2025-06-14T11:33:28.2884015Z",
+  "Updated": "2025-06-14T11:33:28.2884015Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

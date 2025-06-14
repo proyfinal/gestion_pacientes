@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="extraer_datos" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable8" xmlns:sd2="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable10" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="extraer_datos" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable8" xmlns:sd2="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataTable11" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities" xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_pass" Type="OutArgument(ss:SecureString)" />
     <x:Property Name="out_user" Type="OutArgument(x:String)" />
@@ -126,9 +126,11 @@
       <AssemblyReference>Studio.Generated.TypedDataTable8</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable10</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable11</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="extraer_datos" sap:VirtualizedContainerService.HintSize="921.2,2729.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="extraer_datos" sap:VirtualizedContainerService.HintSize="925.2,1740.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="pass_excel" />
     </Sequence.Variables>
@@ -137,8 +139,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="417.6,107.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Cargamos datos de configuracion desde drive." />
-    <uga:ReadRangeConnections x:TypeArguments="sd1:DataTable8" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="config" BrowserItemId="https://docs.google.com/spreadsheets/d/1mPhJjJ9jIHQwt3XTwGzFXo5w_XmVo83tu-1quY7jxBw/edit?usp=drivesdk" ConnectionId="3e275802-d755-43de-b484-3068c9e3bfe0" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="417.6,289.6" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_3" ItemSelectionMode="Browse" Range="'Hoja 1'" ReadAs="Values" Result="[out_dt_config]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Cargamos datos de configuracion desde drive." />
+    <uga:ReadRangeConnections x:TypeArguments="sd1:DataTable8" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="config" BrowserItemId="https://docs.google.com/spreadsheets/d/1mPhJjJ9jIHQwt3XTwGzFXo5w_XmVo83tu-1quY7jxBw/edit?usp=drivesdk" ConnectionId="3e275802-d755-43de-b484-3068c9e3bfe0" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,289.6" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_3" ItemSelectionMode="Browse" Range="'Hoja 1'" ReadAs="Values" Result="[out_dt_config]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
       <uga:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
           <x:String>KEY</x:String>
@@ -165,36 +167,19 @@
         <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
       </uga:ReadRangeConnections.RangeMetadata>
     </uga:ReadRangeConnections>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Cargando config&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_dt_config]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="417.6,407.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-      <ui:ForEachRow.Body>
-        <ActivityAction x:TypeArguments="sd:DataRow">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[CurrentRow(&quot;KEY&quot;).ToString() &amp; &quot; &quot; &amp; CurrentRow(&quot;VALUE&quot;).ToString()]" />
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEachRow.Body>
-    </ui:ForEachRow>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="417.6,126.4" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Extraer contraseña del excel, este paso ahora mismo es secundario pues estamos extrayendo datos de drive." />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Pass_Excel" CacheStrategy="None" DisplayName="Get Credential" FolderPath="projectofinalrpa@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="417.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[pass_excel]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[pass_excel]" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="417.6,88" sap2010:WorkflowViewState.IdRef="Comment_3" Text="//Cargamos datos de inicio de sesión." />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Log_OMRS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="projectofinalrpa@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="417.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[out_pass]" Username="[out_user]" />
-    <ui:Comment sap:VirtualizedContainerService.HintSize="417.6,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Cargamos datos pacientes, los exportamos a datatable para acceder a ella desde la main" />
-    <uga:ReadRangeConnections x:TypeArguments="sd2:DataTable10" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="pacientes" BrowserItemId="https://docs.google.com/spreadsheets/d/1B5B_4YhkvvNKLgSGoWaOE387CvNp0fwPNPsLDOAahU4/edit?usp=drivesdk" ConnectionId="3e275802-d755-43de-b484-3068c9e3bfe0" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="417.6,289.6" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="Browse" Range="'Hoja 1'" ReadAs="Values" Result="[out_dt_pacientes]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Cargando config&quot;]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Extraer contraseña del excel, este paso ahora mismo es secundario pues estamos extrayendo datos de drive." />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" Username="{x:Null}" AssetName="Pass_Excel" CacheStrategy="None" DisplayName="Get Credential" FolderPath="projectofinalrpa@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="416,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3" Password="[pass_excel]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="Comment_3" Text="//Cargamos datos de inicio de sesión." />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Log_OMRS" CacheStrategy="None" DisplayName="Get Credential" FolderPath="projectofinalrpa@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="416,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[out_pass]" Username="[out_user]" />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Cargamos datos pacientes, los exportamos a datatable para acceder a ella desde la main" />
+    <uga:ReadRangeConnections x:TypeArguments="sd2:DataTable11" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" RangeInformation="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="pacientes" BrowserItemId="https://docs.google.com/spreadsheets/d/1B5B_4YhkvvNKLgSGoWaOE387CvNp0fwPNPsLDOAahU4/edit?usp=drivesdk" ConnectionId="3e275802-d755-43de-b484-3068c9e3bfe0" DisplayName="Read Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="416,289.6" sap2010:WorkflowViewState.IdRef="ReadRangeConnections`1_1" ItemSelectionMode="Browse" Range="'Hoja 1'" ReadAs="Values" Result="[out_dt_pacientes]" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
       <uga:ReadRangeConnections.ColumnNames>
         <x:Array Type="x:String">
           <x:String>id</x:String>
           <x:String>Nombre</x:String>
           <x:String>Apellido</x:String>
+          <x:String>Género</x:String>
           <x:String>Direccion</x:String>
           <x:String>Correo</x:String>
           <x:String>Teléfono</x:String>
@@ -232,23 +217,6 @@
         <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
       </uga:ReadRangeConnections.RangeMetadata>
     </uga:ReadRangeConnections>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Datos exportados a memoria interna&quot;]" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[out_dt_pacientes]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="417.6,398.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
-      <ui:ForEachRow.Body>
-        <ActivityAction x:TypeArguments="sd:DataRow">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[CurrentRow(&quot;Nombre&quot;).ToString() &amp; &quot; &quot; &amp; CurrentRow(&quot;Apellido&quot;).ToString()&amp; &quot; &quot; &amp; CurrentRow(&quot;Enfermedad&quot;).ToString()&amp; &quot; &quot; &amp; CurrentRow(&quot;Saturación O2&quot;).ToString()]" />
-          </Sequence>
-        </ActivityAction>
-      </ui:ForEachRow.Body>
-    </ui:ForEachRow>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Datos exportados a memoria interna&quot;]" />
   </Sequence>
 </Activity>

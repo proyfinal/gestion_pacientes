@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QswAGvaAOUKD4oMU4fSjQw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="82537445-7f4b-461c-ba5f-16d20302ef11" CvElementArea="1072, 475, 95, 45" CvType="InputBox" DesignTimeRectangle="1075, 478, 90, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='birthdateYear-field' tag='INPUT' /&gt;" Guid="a9affbb6-4e0c-4dcd-af31-4b3661f290ee" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="82537445-7f4b-461c-ba5f-16d20302ef11" CvTextArea="1072, 437, 148, 25" CvTextArgument="Year (required)" CvType="Text" DesignTimeRectangle="1075, 426, 145, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='         Year      ' parentid='demographics-birthdate' tag='LABEL' /&gt;" Guid="d2d5c415-af3a-4455-8e0f-62096d10b563" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="946bbf3ccd5e904b015c3f9d86aca309.png" xmlns="">05BEr9ptcm0-cMeC0nCmKBA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -110,9 +110,11 @@
       <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
       <AssemblyReference>Studio.Generated.TypedDataTable10</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable9</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable11</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,473.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,668.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_pacientes" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
@@ -139,6 +141,20 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_login_url">[dt_config.Rows(0)("VALUE").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="416,98.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//A partir de aqui, ya está la sesión iniciada y preparada para meter datos." />
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//A partir de aqui, ya está la sesión iniciada y preparada para meter datos. Dejar en este estado cada  vez que se termina una acción." />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="crear_paciente - Invoke Workflow File (crear_paciente.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="crear_paciente.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_adjunto">[dt_pacientes.Rows(2)("Adjunto").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_phone">[dt_pacientes.Rows(2)("Teléfono").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_email">[dt_pacientes.Rows(2)("Correo").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_direccion">[dt_pacientes.Rows(2)("Direccion").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_birth">[dt_pacientes.Rows(2)("Fecha de nacimiento").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_genero">[dt_pacientes.Rows(2)("Género").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_last_name">[dt_pacientes.Rows(2)("Apellido").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_first_name">[dt_pacientes.Rows(2)("Nombre").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_register_url">[dt_config.Rows(2)("VALUE").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_dashboard_url">[dt_config.Rows(1)("VALUE").ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

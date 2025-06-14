@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="18eHkC7b802eAS7NR22RBw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/registrationapp/registerPatient.page" CVScreenId="c554b2ab-c902-4c22-a0fe-e066276217b9" DesignTimeRectangle="1183, 476, 248, 41" ElementType="InputBox" FullSelectorArgument="&lt;webctrl name='familyName' tag='INPUT' /&gt;" Guid="c06fa8ce-bdea-469a-8ff4-5ac2e54dc30d" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c554b2ab-c902-4c22-a0fe-e066276217b9" CvTextArea="1182, 434, 241, 28" CvTextArgument="Family Name (required)" CvType="Text" DesignTimeRectangle="1183, 424, 248, 45" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='         Family Name      ' tag='LABEL' /&gt;" Guid="5e7140bb-d2c0-483f-9566-c2b0b11915dd" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="64239d45b8cedab5a0ce6d81bd800a1b.png" xmlns="">0pao9em94DU-lDytXzSrsqg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
