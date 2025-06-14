@@ -128,7 +128,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable10</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="extraer_datos" sap:VirtualizedContainerService.HintSize="925.2,2729.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="extraer_datos" sap:VirtualizedContainerService.HintSize="921.2,2729.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="pass_excel" />
     </Sequence.Variables>
