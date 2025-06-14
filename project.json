@@ -5,6 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.GSuite.Activities": "[3.2.0-preview]",
+    "UiPath.Persistence.Activities": "[1.6.2]",
     "UiPath.System.Activities": "[25.4.4]",
     "UiPath.UIAutomation.Activities": "[25.10.4]"
   },

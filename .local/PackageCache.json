@@ -158,9 +158,9 @@
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.7\\lib/net6.0-windows7.0/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.appsignatures\\25.4.134.4749\\lib/net6.0-windows7.0/AppSignatures.Locator.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.codedworkflows\\24.10.1\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/Emgu.CV.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/concrt140.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/cvextern.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/Emgu.CV.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/libusb-1.0.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/msvcp140.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib/net6.0/msvcp140_1.dll",
@@ -184,22 +184,48 @@
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities\\25.10.4\\lib/net6.0-windows7.0/UiPath.Wizards.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.CV.Activities.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.CV.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationCore.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.API.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.ExternalIntegrations.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib/net6.0-windows7.0/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime.design\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Runtime.Design.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.design.recoverypanel\\25.10.4\\lib/net6.0/UiPath.UIAutomation.Design.RecoveryPanel.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.Core.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib/net6.0-windows7.0/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities\\25.10.4"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Persistence.Activities",
+        "Version": "1.6.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.4.1\\lib/net8.0/Microsoft.IdentityModel.Abstractions.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.4.1\\lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.logging\\7.4.1\\lib/net8.0/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.4.1\\lib/net8.0/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250519.7\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.1\\lib/net8.0/System.IdentityModel.Tokens.Jwt.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7\\lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib/net6.0-windows7.0/UiPath.Orchestrator.Service.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib/net6.0-windows7.0/UiPath.Persistence.Activities.Design.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib/net6.0-windows7.0/UiPath.Persistence.Activities.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib/net6.0-windows7.0/UiPath.Persistence.Orchestrator.Client.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.platform\\25.4.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.telemetry.client\\2.5.17\\lib/netstandard2.0/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2"
     }
   ],
   "Conflicts": [],
@@ -690,6 +716,41 @@
       "Id": "Microsoft.Extensions.Primitives",
       "Version": "6.0.1",
       "Dependencies": []
+    },
+    "Microsoft.IdentityModel.Abstractions": {
+      "Id": "Microsoft.IdentityModel.Abstractions",
+      "Version": "7.4.1",
+      "Dependencies": []
+    },
+    "Microsoft.IdentityModel.JsonWebTokens": {
+      "Id": "Microsoft.IdentityModel.JsonWebTokens",
+      "Version": "7.4.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.Tokens",
+          "Item2": "[7.4.1, )"
+        }
+      ]
+    },
+    "Microsoft.IdentityModel.Logging": {
+      "Id": "Microsoft.IdentityModel.Logging",
+      "Version": "7.4.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.Abstractions",
+          "Item2": "[7.4.1, )"
+        }
+      ]
+    },
+    "Microsoft.IdentityModel.Tokens": {
+      "Id": "Microsoft.IdentityModel.Tokens",
+      "Version": "7.4.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.Logging",
+          "Item2": "[7.4.1, )"
+        }
+      ]
     },
     "Microsoft.Management.Infrastructure": {
       "Id": "Microsoft.Management.Infrastructure",
@@ -2153,6 +2214,20 @@
         }
       ]
     },
+    "System.IdentityModel.Tokens.Jwt": {
+      "Id": "System.IdentityModel.Tokens.Jwt",
+      "Version": "7.4.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.JsonWebTokens",
+          "Item2": "[7.4.1, )"
+        },
+        {
+          "Item1": "Microsoft.IdentityModel.Tokens",
+          "Item2": "[7.4.1, )"
+        }
+      ]
+    },
     "System.IO": {
       "Id": "System.IO",
       "Version": "4.3.0",
@@ -2966,6 +3041,11 @@
     "System.Reflection.TypeExtensions": {
       "Id": "System.Reflection.TypeExtensions",
       "Version": "4.4.0",
+      "Dependencies": []
+    },
+    "System.Resources.Extensions": {
+      "Id": "System.Resources.Extensions",
+      "Version": "5.0.0",
       "Dependencies": []
     },
     "System.Resources.ResourceManager": {
@@ -4087,6 +4167,16 @@
         }
       ]
     },
+    "UiPath.FormActivityLibrary.Contracts": {
+      "Id": "UiPath.FormActivityLibrary.Contracts",
+      "Version": "2.0.7",
+      "Dependencies": [
+        {
+          "Item1": "System.Resources.Extensions",
+          "Item2": "[5.0.0, )"
+        }
+      ]
+    },
     "UiPath.GSuite.Activities": {
       "Id": "UiPath.GSuite.Activities",
       "Version": "3.2.0-preview",
@@ -4269,6 +4359,36 @@
         {
           "Item1": "System.Diagnostics.DiagnosticSource",
           "Item2": "[8.0.0, )"
+        }
+      ]
+    },
+    "UiPath.Persistence.Activities": {
+      "Id": "UiPath.Persistence.Activities",
+      "Version": "1.6.2",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Rest.ClientRuntime",
+          "Item2": "[2.3.23, )"
+        },
+        {
+          "Item1": "System.Activities.ViewModels",
+          "Item2": "[1.0.0-20250425.1, )"
+        },
+        {
+          "Item1": "System.IdentityModel.Tokens.Jwt",
+          "Item2": "[7.4.1, )"
+        },
+        {
+          "Item1": "UiPath.FormActivityLibrary.Contracts",
+          "Item2": "[2.0.7-alpha.4234105, )"
+        },
+        {
+          "Item1": "UiPath.Platform",
+          "Item2": "[24.12.0, )"
+        },
+        {
+          "Item1": "UiPath.Telemetry.Client",
+          "Item2": "[1.5.3, )"
         }
       ]
     },
@@ -4974,6 +5094,46 @@
         "C:\\Users\\selgy\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.Abstractions",
+        "Version": "7.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.4.1\\lib\\net8.0\\Microsoft.IdentityModel.Abstractions.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.4.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.JsonWebTokens",
+        "Version": "7.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.4.1\\lib\\net8.0\\Microsoft.IdentityModel.JsonWebTokens.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.4.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.Logging",
+        "Version": "7.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.logging\\7.4.1\\lib\\net8.0\\Microsoft.IdentityModel.Logging.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.logging\\7.4.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.Tokens",
+        "Version": "7.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.4.1\\lib\\net8.0\\Microsoft.IdentityModel.Tokens.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.4.1"
     },
     {
       "Package": {
@@ -6099,6 +6259,16 @@
     },
     {
       "Package": {
+        "Id": "System.IdentityModel.Tokens.Jwt",
+        "Version": "7.4.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.1\\lib\\net8.0\\System.IdentityModel.Tokens.Jwt.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.4.1"
+    },
+    {
+      "Package": {
         "Id": "System.IO",
         "Version": "4.3.0"
       },
@@ -6440,6 +6610,16 @@
         "C:\\Users\\selgy\\.nuget\\packages\\system.reflection.typeextensions\\4.4.0\\lib\\netcoreapp2.0\\_._"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\system.reflection.typeextensions\\4.4.0"
+    },
+    {
+      "Package": {
+        "Id": "System.Resources.Extensions",
+        "Version": "5.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\system.resources.extensions\\5.0.0\\lib\\netstandard2.0\\System.Resources.Extensions.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\system.resources.extensions\\5.0.0"
     },
     {
       "Package": {
@@ -6973,9 +7153,9 @@
         "Version": "1.3.0"
       },
       "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\Emgu.CV.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\concrt140.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\cvextern.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\Emgu.CV.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\libusb-1.0.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\msvcp140.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\msvcp140_1.dll",
@@ -6986,6 +7166,16 @@
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0\\lib\\net6.0\\vcruntime140_1.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.emgucvbundle\\1.3.0"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.FormActivityLibrary.Contracts",
+        "Version": "2.0.7"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7\\lib\\net5.0-windows7.0\\UiPath.Form.ActivityLibrary.Contracts.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.formactivitylibrary.contracts\\2.0.7"
     },
     {
       "Package": {
@@ -7041,6 +7231,19 @@
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17\\lib\\netstandard2.0\\UiPath.OpenTelemetry.Contracts.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Persistence.Activities",
+        "Version": "1.6.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib\\net6.0-windows7.0\\UiPath.Orchestrator.Service.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib\\net6.0-windows7.0\\UiPath.Persistence.Activities.Design.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib\\net6.0-windows7.0\\UiPath.Persistence.Activities.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2\\lib\\net6.0-windows7.0\\UiPath.Persistence.Orchestrator.Client.dll"
+      ],
+      "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.persistence.activities\\1.6.2"
     },
     {
       "Package": {
@@ -7117,13 +7320,13 @@
       "Assemblies": [
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.Activities.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.CV.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationCore.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.Contracts.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.Activities.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.API.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.ExternalIntegrations.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UIAutomationNext.ExternalIntegrations.dll"
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4\\lib\\net6.0-windows7.0\\UiPath.UiAutomation.Activities.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.uiautomation.activities.runtime\\25.10.4"
     },
@@ -7155,9 +7358,9 @@
       "Assemblies": [
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Core.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.dll",
         "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0\\lib\\net6.0-windows7.0\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\selgy\\.nuget\\packages\\uipath.vision\\3.15.0"
     }

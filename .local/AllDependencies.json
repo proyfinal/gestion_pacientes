@@ -765,6 +765,67 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
+      "Microsoft.IdentityModel.Abstractions/7.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Management.Infrastructure/3.0.0": {
         "type": "package",
         "dependencies": {
@@ -2369,6 +2430,23 @@
           }
         }
       },
+      "System.IdentityModel.Tokens.Jwt/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.4.1",
+          "Microsoft.IdentityModel.Tokens": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IO/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3047,6 +3125,19 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Resources.Extensions/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Resources.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -4184,6 +4275,18 @@
           "lib/net6.0/vcruntime140_1.dll": {}
         }
       },
+      "UiPath.FormActivityLibrary.Contracts/2.0.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.Extensions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll": {}
+        }
+      },
       "UiPath.GSuite.Activities/3.2.0-preview": {
         "type": "package",
         "dependencies": {
@@ -4495,6 +4598,100 @@
         },
         "runtime": {
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Persistence.Activities/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.23",
+          "System.Activities.ViewModels": "1.0.0-20250425.1",
+          "System.IdentityModel.Tokens.Jwt": "7.4.1",
+          "UiPath.FormActivityLibrary.Contracts": "2.0.7-alpha.4234105",
+          "UiPath.Platform": "24.12.0",
+          "UiPath.Telemetry.Client": "1.5.3"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Orchestrator.Service.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Orchestrator.Client.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "zh-TW"
+          }
         }
       },
       "UiPath.Platform/25.4.0": {
@@ -5887,6 +6084,67 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/7.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Management.Infrastructure/3.0.0": {
@@ -7471,6 +7729,23 @@
           "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {}
         }
       },
+      "System.IdentityModel.Tokens.Jwt/7.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.4.1",
+          "Microsoft.IdentityModel.Tokens": "7.4.1"
+        },
+        "compile": {
+          "lib/net8.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IO/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -8144,6 +8419,19 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.Resources.Extensions/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Resources.Extensions.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -9182,6 +9470,18 @@
           "lib/net6.0/vcruntime140_1.dll": {}
         }
       },
+      "UiPath.FormActivityLibrary.Contracts/2.0.7": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.Extensions": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll": {}
+        }
+      },
       "UiPath.GSuite.Activities/3.2.0-preview": {
         "type": "package",
         "dependencies": {
@@ -9493,6 +9793,100 @@
         },
         "runtime": {
           "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll": {}
+        }
+      },
+      "UiPath.Persistence.Activities/1.6.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.23",
+          "System.Activities.ViewModels": "1.0.0-20250425.1",
+          "System.IdentityModel.Tokens.Jwt": "7.4.1",
+          "UiPath.FormActivityLibrary.Contracts": "2.0.7-alpha.4234105",
+          "UiPath.Platform": "24.12.0",
+          "UiPath.Telemetry.Client": "1.5.3"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/UiPath.Orchestrator.Service.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Activities.Design.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Activities.dll": {},
+          "lib/net6.0-windows7.0/UiPath.Persistence.Orchestrator.Client.dll": {}
+        },
+        "resource": {
+          "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "es-MX"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "zh-CN"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.Design.resources.dll": {
+            "locale": "zh-TW"
+          },
+          "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.resources.dll": {
+            "locale": "zh-TW"
+          }
         }
       },
       "UiPath.Platform/25.4.0": {
@@ -11396,6 +11790,98 @@
         "microsoft.extensions.primitives.6.0.1.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.IdentityModel.Abstractions/7.4.1": {
+      "sha512": "GiQzMSzHQWPhnjpn/xy6SGcjtN8ZJbhB9ZEg3RglJ64QwH+VGp7xEpIN674UgjSDF+jJSrAY4/7/2S6F7Nh0hw==",
+      "type": "package",
+      "path": "microsoft.identitymodel.abstractions/7.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net461/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net462/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net472/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
+        "microsoft.identitymodel.abstractions.7.4.1.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/7.4.1": {
+      "sha512": "RnrQO8IniImY6qrC9qYDc7UBcbPF7+Dp14ee9TqKnlB2/oyIKq8Q3tJ/65zgYvfV4p6iMYLpi+W8C/36J58cIg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net462/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net462/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net472/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net472/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "microsoft.identitymodel.jsonwebtokens.7.4.1.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Logging/7.4.1": {
+      "sha512": "QsNBNAdoTP+JxBqqMw3isVeV86z2b+ka94Pue3eRRz8O15mfHhcSnb10IM+aqavAaxCO+EwNu5F/yyRlQ0usWg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.logging/7.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Logging.dll",
+        "lib/net461/Microsoft.IdentityModel.Logging.xml",
+        "lib/net462/Microsoft.IdentityModel.Logging.dll",
+        "lib/net462/Microsoft.IdentityModel.Logging.xml",
+        "lib/net472/Microsoft.IdentityModel.Logging.dll",
+        "lib/net472/Microsoft.IdentityModel.Logging.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Logging.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Logging.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
+        "microsoft.identitymodel.logging.7.4.1.nupkg.sha512",
+        "microsoft.identitymodel.logging.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Tokens/7.4.1": {
+      "sha512": "akl3hQWdj87XkSRahwhrmx9ZfchF97RZoKr9v9fwjrpQz3t0x8lnsjcOfButSS6cvyY/EX0HJuXb5hgkqFjP/g==",
+      "type": "package",
+      "path": "microsoft.identitymodel.tokens/7.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net461/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net462/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net462/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net472/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net472/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net6.0/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net8.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net8.0/Microsoft.IdentityModel.Tokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
+        "microsoft.identitymodel.tokens.7.4.1.nupkg.sha512",
+        "microsoft.identitymodel.tokens.nuspec"
       ]
     },
     "Microsoft.Management.Infrastructure/3.0.0": {
@@ -14656,6 +15142,29 @@
         "system.globalization.extensions.nuspec"
       ]
     },
+    "System.IdentityModel.Tokens.Jwt/7.4.1": {
+      "sha512": "V8T6qCdNI5OEUafOhyOnyuwHlTs56hPE6nQLNDXDNI7MIQO8MGRQVuWOruzEscURXpGbNuRz+m8qFrT8SDeEQA==",
+      "type": "package",
+      "path": "system.identitymodel.tokens.jwt/7.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net461/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net462/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net462/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net472/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net472/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net6.0/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net8.0/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
+        "system.identitymodel.tokens.jwt.7.4.1.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.nuspec"
+      ]
+    },
     "System.IO/4.3.0": {
       "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "type": "package",
@@ -16211,6 +16720,27 @@
         "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
         "system.reflection.typeextensions.4.4.0.nupkg.sha512",
         "system.reflection.typeextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Resources.Extensions/5.0.0": {
+      "sha512": "KBiqY/+W6hWVwucHBHO76JkgBGyawlxCcP946MhK8dNjalaBgZkyHaux8ko58PENTqQHHjoDa7cfIkAchfJPPA==",
+      "type": "package",
+      "path": "system.resources.extensions/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/net461/System.Resources.Extensions.targets",
+        "lib/net461/System.Resources.Extensions.dll",
+        "lib/net461/System.Resources.Extensions.xml",
+        "lib/netstandard2.0/System.Resources.Extensions.dll",
+        "lib/netstandard2.0/System.Resources.Extensions.xml",
+        "system.resources.extensions.5.0.0.nupkg.sha512",
+        "system.resources.extensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -18659,6 +19189,20 @@
         "uipath.emgucvbundle.nuspec"
       ]
     },
+    "UiPath.FormActivityLibrary.Contracts/2.0.7": {
+      "sha512": "ORXD1G90bOPkCUE1vUlH7853Q42lA71U54th6dY3JZHHoHSvd1m2kN2x5eUcDeHI+CF9YVJJg6x/Y0qLGFBvRw==",
+      "type": "package",
+      "path": "uipath.formactivitylibrary.contracts/2.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "lib/net5.0-windows7.0/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "lib/net5.0/UiPath.Form.ActivityLibrary.Contracts.dll",
+        "uipath.formactivitylibrary.contracts.2.0.7.nupkg.sha512",
+        "uipath.formactivitylibrary.contracts.nuspec"
+      ]
+    },
     "UiPath.GSuite.Activities/3.2.0-preview": {
       "sha512": "/weh5Nsw1Tm9e6jzZD3oYuNVt511WmddbEAcTQ/clFm3kmVyfuGJYtFqCPEp6flSNnk5kQrt3gRMh1F6JrWtUg==",
       "type": "package",
@@ -19126,6 +19670,88 @@
         "lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
         "uipath.opentelemetry.contracts.2.5.17.nupkg.sha512",
         "uipath.opentelemetry.contracts.nuspec"
+      ]
+    },
+    "UiPath.Persistence.Activities/1.6.2": {
+      "sha512": "EfOWZMd/c+X92lR1EdFb+GfpP1cZGOgutINUqHl8jUMQOFWXejEOHh3MqcPX+F8wn3ffU9zo2VKQ2N6mqwfMSg==",
+      "type": "package",
+      "path": "uipath.persistence.activities/1.6.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/UiPath.Orchestrator.Service.dll",
+        "lib/net461/UiPath.Persistence.Activities.Design.dll",
+        "lib/net461/UiPath.Persistence.Activities.dll",
+        "lib/net461/UiPath.Persistence.Orchestrator.Client.dll",
+        "lib/net461/de/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/de/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/es-MX/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/es-MX/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/es/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/es/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/fr/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/fr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/ja/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/ja/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/ko/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/ko/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/pt-BR/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/pt-BR/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/pt/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/pt/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/ru/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/ru/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/tr/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/tr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/zh-CN/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/zh-CN/UiPath.Persistence.Activities.resources.dll",
+        "lib/net461/zh-TW/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net461/zh-TW/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/UiPath.Orchestrator.Service.dll",
+        "lib/net6.0-windows7.0/UiPath.Persistence.Activities.Design.dll",
+        "lib/net6.0-windows7.0/UiPath.Persistence.Activities.dll",
+        "lib/net6.0-windows7.0/UiPath.Persistence.Orchestrator.Client.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/de/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es-MX/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/es/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/fr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ja/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ko/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt-BR/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/pt/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/ru/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/tr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-CN/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.Design.resources.dll",
+        "lib/net6.0-windows7.0/zh-TW/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/UiPath.Orchestrator.Service.dll",
+        "lib/net6.0/UiPath.Persistence.Activities.dll",
+        "lib/net6.0/UiPath.Persistence.Orchestrator.Client.dll",
+        "lib/net6.0/de/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/es-MX/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/es/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/fr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/ja/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/ko/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/pt-BR/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/pt/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/ru/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/tr/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/zh-CN/UiPath.Persistence.Activities.resources.dll",
+        "lib/net6.0/zh-TW/UiPath.Persistence.Activities.resources.dll",
+        "uipath.persistence.activities.1.6.2.nupkg.sha512",
+        "uipath.persistence.activities.nuspec"
       ]
     },
     "UiPath.Platform/25.4.0": {
@@ -20136,6 +20762,7 @@
     "": [],
     "net8.0-windows7.0": [
       "UiPath.GSuite.Activities >= 3.2.0-preview <= 3.2.0-preview",
+      "UiPath.Persistence.Activities >= 1.6.2 <= 1.6.2",
       "UiPath.System.Activities >= 25.4.4 <= 25.4.4",
       "UiPath.UIAutomation.Activities >= 25.10.4 <= 25.10.4"
     ]
@@ -20147,9 +20774,9 @@
     "restore": {
       "projectUniqueName": "BlankProcess2",
       "projectName": "BlankProcess2",
-      "projectPath": "C:\\Users\\selgy\\Documents\\UiPath\\BlankProcess2\\.local",
+      "projectPath": "C:\\Users\\selgy\\Documents\\UiPath\\gestion_pacientes\\.local",
       "packagesPath": "C:\\Users\\selgy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\selgy\\Documents\\UiPath\\BlankProcess2\\.local",
+      "outputPath": "C:\\Users\\selgy\\Documents\\UiPath\\gestion_pacientes\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -20162,6 +20789,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[3.2.0-preview, 3.2.0-preview]"
+          },
+          "UiPath.Persistence.Activities": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.6.2, 1.6.2]"
           },
           "UiPath.System.Activities": {
             "include": "Runtime",
@@ -20182,5 +20814,18 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "UiPath.Persistence.Activities 1.6.2 depends on UiPath.FormActivityLibrary.Contracts (>= 2.0.7-alpha.4234105) but UiPath.FormActivityLibrary.Contracts 2.0.7-alpha.4234105 was not found. UiPath.FormActivityLibrary.Contracts 2.0.7 was resolved instead.",
+      "libraryId": "UiPath.FormActivityLibrary.Contracts",
+      "targetGraphs": [
+        "net8.0-windows7.0",
+        "net8.0-windows7.0/win-x64"
+      ]
+    }
+  ]
 }
