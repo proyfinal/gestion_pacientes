@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4wU18PK7u0SE18rupcwn9w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="c6b7b47e-b063-4160-bf99-5f57fcffbe9b" DesignTimeRectangle="1255, 659, 159, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='loginButton' tag='INPUT' /&gt;" Guid="f1d90f12-2660-42ed-a790-c09718b8b6a7" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="b9e18d738c9a0b5a60a3f30b43450516.png" xmlns="">0xocUmxoTrEKnHWGHDROVng</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

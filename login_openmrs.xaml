@@ -1,5 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="login_openmrs" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="login_openmrs" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_pass" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_user" Type="InArgument(x:String)" />
     <x:Property Name="in_login_url" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -44,6 +46,7 @@
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -101,28 +104,101 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login_openmrs" sap:VirtualizedContainerService.HintSize="925.2,668" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login_openmrs" sap:VirtualizedContainerService.HintSize="925.2,1711.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="483.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Comprobando url: &quot;+ in_login_url]" />
-    <uix:NApplicationCard CloseMode="Never" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,470.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="785c8a81-0cde-409a-9af0-b4e403b6ccde">
+    <uix:NApplicationCard CloseMode="Never" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1415.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="785c8a81-0cde-409a-9af0-b4e403b6ccde">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1166.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Accediendo&quot;]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Username'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="785c8a81-0cde-409a-9af0-b4e403b6ccde" Text="[in_user]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="4846146a-f530-474a-a311-c0c6e7f49c53" ContentHash="Mx8ukqeWDUaBhgPTrGA3kw" DesignTimeRectangle="389, 380, 506, 50" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' /&gt;" Guid="acfb23c7-fe6a-49d4-b3b3-ee19f7dabc68" InformativeScreenshot="28190c58ea712dc4cda6ee2188e41fa0.png" IsResponsive="True" Reference="yo6pYHpOtEys6_EC7ZMvHA/N-TXObcLBk6R66wyQ91Mzg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="4846146a-f530-474a-a311-c0c6e7f49c53" DesignTimeRectangle="389, 344, 506, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='                                     Username:                                 ' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Username:' /&gt;" Guid="de1f75dd-7f1d-4876-81f1-2e0fb07e71a9" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="785c8a81-0cde-409a-9af0-b4e403b6ccde" SecureText="[in_pass]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="c6b7b47e-b063-4160-bf99-5f57fcffbe9b" ContentHash="EtKAaqZGc02yq1sm0OAd4Q" DesignTimeRectangle="920, 380, 506, 50" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' /&gt;" Guid="8dd24ee3-8b87-4df3-948a-9ecc9345d43c" InformativeScreenshot="dece8312c2ae3f0991e753c63e8b9677.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/wgPWh-Pkx0-QlSym9H_y0w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="c6b7b47e-b063-4160-bf99-5f57fcffbe9b" DesignTimeRectangle="920, 344, 506, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                     Password:                                 ' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Password:' /&gt;" Guid="6cbfcea9-04ee-4bd6-9ec3-cae587caddd3" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//Seleccionamos seccion de cliente" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Inpatient Ward'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="785c8a81-0cde-409a-9af0-b4e403b6ccde" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="90dcc52c-1cbd-4163-8710-84f88be7dcff" ContentHash="vzDTF8TyvUSZAYFwrPUJeA" DesignTimeRectangle="415, 543, 312, 44" ElementType="ListItem" FullSelectorArgument="&lt;webctrl id='Inpatient Ward' tag='LI' /&gt;" Guid="f7ffa897-64ea-4fd6-a854-b9eecb600f19" InformativeScreenshot="3bab2b9da1c9f7e652d16f32bf949b32.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/__HGAKSI80-6HPM4y8H-HA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="785c8a81-0cde-409a-9af0-b4e403b6ccde" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="c6b7b47e-b063-4160-bf99-5f57fcffbe9b" ContentHash="4wU18PK7u0SE18rupcwn9w" DesignTimeRectangle="1255, 659, 159, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl id='loginButton' tag='INPUT' /&gt;" Guid="f1d90f12-2660-42ed-a790-c09718b8b6a7" InformativeScreenshot="b9e18d738c9a0b5a60a3f30b43450516.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/pEp_tzac3ki7VyGPu1z6ow" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -130,5 +206,6 @@
         <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="HUusZw2xoEysGnDuR2wIjw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAC/klEQVQ4T23STUgUUQAH8H9EHdJK02dZGvb6IOiSFETZN3WpDLVtx3Ys2tWnVmb2QUaspDSraLW0zmaLhpXR+GZb+0CL8hYEUaciOhR06tQXOztbW5o18XS29tDhD3OY/4/3/jyUOm/jhWcjflXnwmRUJN9k9IjJ6IDJ6HOT0Wcmo7rJaK3JaI74x3LPw3DDaqCrA3BKYbS4fDDYIiTYfMTYwoDJqPW/xBit/15VgChbiI1tdUCwDZAlDSXOu2hytSPOKH5U5/fahVGT0bcmo+/ssjXmyT8RrypAUXs90HUOUJUJoEK6OY54XR2IswWXv7KCPpPR5Sajc0xGc01G145V5g3eOra+cYn/NHCpfaJsA7NkSfO7pP5rO5xDV4f3l221qmcn9/gbyz13stfrKEfoYhiqwqEqbVCVqQJwy5JmieyR+JAsaZMDFSdh1WSK00yUK/PwsWYRZgaa0xD0vYSqWHbWCeCGDfyWJW2DwxlBVXkvruw9jJh7CUYr8/CwYQ3KfDVAsFUc25MCNAlg2Aa+yJJWIPYolzgcjjt4eWwFVvoaMEmsnRxNVValAN0CeGQDUVnSqBh1W/ED9Jw6iDeRPAT7NmFqsAUIXAA62wRQlAKEBNCT3ECWtO3S7jB89V68ChViLJIGKzwN928Uwt1dgcVdxwG19WgKcEIAjiRQvlt/6pavT/l0cx5GItMR5TmIcoJRPWMccvfsmY3Oc+/tcgKqUiiANFnSal3O/uaS0nutj/1bpJGB9GkGJ0gmxrPxk2fkeHuLPej0e8fHU5V9UJVJ/x5SyT2cOXgWiUiGGuPZTwxOHAYnSw1OlhmceOI863WcZzeuD9UBgfP/HtKustvYWTKIpgM+RPtz8C2cGTQ4sewkDE5+iO8oJ9aInnkyqhMUhQ4BAT/Q2QG01DXj/NFGfNZyRVncuSUFSM1YlJPKhD4LH/rnoLR7PzaHaoHRgXSMDKTD1LOSd84wOJENTnoNToYNTh4anFw2OCk2OBnfJs6z8FufAUufgT+mbrwfWRx0CwAAAABJRU5ErkJggg==" sap2010:WorkflowViewState.IdRef="TargetApp_2" InformativeScreenshot="94ddb4f96319341244fc8bccf7521d26.jpg" Reference="yo6pYHpOtEys6_EC7ZMvHA/J5NDLpSR5EKMnTSVsTOJog" Selector="&lt;html app='msedge.exe' title='Login' /&gt;" Url="[in_login_url]" Version="V2" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="483.2,98.4" sap2010:WorkflowViewState.IdRef="Comment_2" Text="//A partir de aquí, ya está iniciada la sesión y ya cada uno desarrolla una parte." />
   </Sequence>
 </Activity>

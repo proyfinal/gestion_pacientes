@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vzDTF8TyvUSZAYFwrPUJeA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/login.htm" CVScreenId="90dcc52c-1cbd-4163-8710-84f88be7dcff" DesignTimeRectangle="415, 543, 312, 44" ElementType="ListItem" FullSelectorArgument="&lt;webctrl id='Inpatient Ward' tag='LI' /&gt;" Guid="f7ffa897-64ea-4fd6-a854-b9eecb600f19" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="3bab2b9da1c9f7e652d16f32bf949b32.png" xmlns="">0OGh2eayQtECdL22TvfcR9g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Inpatient Ward",
+  "Type": "Element",
+  "Id": "__HGAKSI80-6HPM4y8H-HA",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/__HGAKSI80-6HPM4y8H-HA",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/J5NDLpSR5EKMnTSVsTOJog",
+  "Created": "2025-06-14T09:53:59.4430363Z",
+  "Updated": "2025-06-14T09:53:59.4430363Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
