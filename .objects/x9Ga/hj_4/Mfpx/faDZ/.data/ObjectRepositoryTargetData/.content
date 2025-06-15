@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Qt1PFHLeSESA_kKNnm504g" Reference="yo6pYHpOtEys6_EC7ZMvHA/faDZZLzwDUapYHhNXCFgdg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="a6602bc2-5e07-493d-80f2-3fac8a958165" DesignTimeRectangle="146, 59, 1406, 35" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='OpenMRS Electronic Medical Record - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Barra de la aplicación' role='tool bar' /&gt;&lt;ctrl name='Dirección y barra de búsqueda' role='editable text' /&gt;" Guid="5f9b82ec-88c2-4d44-b3b1-6aa4d87aa2ca" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='OpenMRS Electronic Medical Record - Personal: Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="fee8b3473b7fee02ff43e4df15068165.png" xmlns="">0tw8gm_dJ1ESJPE-I_lCg5Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

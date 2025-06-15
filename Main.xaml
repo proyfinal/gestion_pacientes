@@ -115,8 +115,9 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,952" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,1304" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="paciente_panel" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_pacientes" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
@@ -160,9 +161,23 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_dashboard_url">[dt_config.Rows(1)("VALUE").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="visit_note - Invoke Workflow File (visit_note.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="visit_note.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="visit_note - Invoke Workflow File (visit_note.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="visit_note.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_paciente_panel">[paciente_panel]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_diag">[dt_pacientes.Rows(2)("Enfermedad").ToString()]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="solicitar_cita - Invoke Workflow File (solicitar_cita.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="solicitar_cita.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_paciente_panel">[paciente_panel]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_estado">[dt_pacientes.Rows(2)("Estado Crónico").ToString()]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="coger_cita - Invoke Workflow File (coger_cita.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="coger_cita.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_my_mail">giograyhatter@gmail.com</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_id">[dt_pacientes.Rows(2)("id").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_paciente_panel">[paciente_panel]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

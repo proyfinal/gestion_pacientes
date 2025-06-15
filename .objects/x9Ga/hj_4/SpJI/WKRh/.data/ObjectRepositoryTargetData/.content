@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gVtdbirGhUevOJQDe9HeGw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" DesignTimeRectangle="336, 742, 280, 60" FullSelectorArgument="&lt;webctrl id='appointmentTable' tag='TABLE' /&gt;&lt;webctrl aaname='15 Jul 202510:00 AM - 1:00 AM' tag='DIV' /&gt;" Guid="41559435-7e15-4f6c-a305-6c6cc92fbfea" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="09ee4ceabdbe8e1caba8918eb7b955a6.png" xmlns="">0d9m-XpCmRUG4iKtcerjxNw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

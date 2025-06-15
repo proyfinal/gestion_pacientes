@@ -1,5 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="visit_note" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="out_paciente_panel" Type="OutArgument(x:String)" />
     <x:Property Name="in_diag" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
@@ -43,6 +44,8 @@
       <x:String>System.Security</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,26 +94,40 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="visit_note" sap:VirtualizedContainerService.HintSize="925.2,1548" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="visit_note" sap:VirtualizedContainerService.HintSize="925.2,1737.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1524.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1714.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1284.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1474.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'httpso2.openmrs.org…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" TextString="[out_paciente_panel]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="a6602bc2-5e07-493d-80f2-3fac8a958165" ContentHash="Qt1PFHLeSESA_kKNnm504g" DesignTimeRectangle="146, 59, 1406, 35" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='OpenMRS Electronic Medical Record - Microsoft Edge' role='pane' /&gt;&lt;ctrl name='Barra de la aplicación' role='tool bar' /&gt;&lt;ctrl name='Dirección y barra de búsqueda' role='editable text' /&gt;" Guid="5f9b82ec-88c2-4d44-b3b1-6aa4d87aa2ca" ImageBase64="" InformativeScreenshot="fee8b3473b7fee02ff43e4df15068165.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/faDZZLzwDUapYHhNXCFgdg" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='OpenMRS Electronic Medical Record - Personal: Microsoft​ Edge' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Visit Note'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="52479b93-b5a7-49e1-9b79-4d4c10f5583a" ContentHash="KNZLFvoXiUKMP4TWb2ftFA" DesignTimeRectangle="979, 608, 273, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl id='referenceapplication.realTime.simpleVisitNote' tag='A' /&gt;" Guid="be07373c-4075-4395-93ee-fa1eb7dd88c9" InformativeScreenshot="d972138e4859785444808184836dddeb.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/CC7tPaBEWEK2Qk9dOrVRVA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
@@ -165,9 +182,9 @@
                 </uix:VerifyExecutionOptions>
               </uix:NKeyboardShortcuts.VerifyOptions>
             </uix:NKeyboardShortcuts>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c5438d3f-86aa-45e3-9bf1-d9c0da1a3e5c" Version="V4">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page" CVScreenId="9d31e395-0f64-4af3-b9ab-0088f1ce3972" ContentHash="aqPIHJfU5EG0tPLRzmuoZQ" DesignTimeRectangle="1458, 953, 95, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' /&gt;" Guid="c32fbc21-201c-4ae4-b2aa-f1309192f597" InformativeScreenshot="a55b0c236b39a0d78e5b2a9293e989b2.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/sbUdQHnKekaUvCgAOMiIvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page" CVScreenId="9d31e395-0f64-4af3-b9ab-0088f1ce3972" ContentHash="cWINkVjwokCoIvgR48SbQQ" DesignTimeRectangle="1458, 953, 95, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' value='Save' /&gt;" Guid="c32fbc21-201c-4ae4-b2aa-f1309192f597" InformativeScreenshot="a55b0c236b39a0d78e5b2a9293e989b2.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/sbUdQHnKekaUvCgAOMiIvQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">

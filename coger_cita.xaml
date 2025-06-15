@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="coger_cita" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_my_mail" Type="InArgument(x:String)" />
+    <x:Property Name="in_id" Type="InArgument(x:String)" />
+    <x:Property Name="in_paciente_panel" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>coger_cita_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Models</x:String>
+      <x:String>UiPath.Shared.Api.Google.Gmail.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Utilities</x:String>
+      <x:String>UiPath.Productivity.Activities.Diagnostics</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Triggers</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>Google.Apis.Forms.v1.Data</x:String>
+      <x:String>Google.Apis.Requests</x:String>
+      <x:String>UiPath.Platform</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Azure.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Google.Apis.Forms.v1</AssemblyReference>
+      <AssemblyReference>Google.Apis</AssemblyReference>
+      <AssemblyReference>Google.Apis.Core</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Azure</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="coger_cita" sap:VirtualizedContainerService.HintSize="921.2,2602.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="500.8,2579.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,2339.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="dia_de_cita" />
+              <Variable x:TypeArguments="x:String" Name="picture_path" />
+              <Variable x:TypeArguments="ui:Image" Name="image" />
+              <Variable x:TypeArguments="x:String" Name="img_body" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="e2482458-3a67-47e5-bf78-7ae0c091add6" ContentHash="Hy1HzY2CDE2Mydr6YdFbFg" DesignTimeRectangle="1456, 487, 67, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Actions ' parentid='content' tag='SPAN' /&gt;" Guid="408317aa-e350-47a9-9d74-9c164a82c937" InformativeScreenshot="54ff50ba8d9b9469763d93823e035062.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/-JuFc25sdUabkLOKwFwjlQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Schedule Appointment'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="84697b59-a6c7-4f97-90c5-debf3a7bb42c" ContentHash="gpZX1Re_70qHBKEqyD-U5g" DesignTimeRectangle="14, 159, 0, 0" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Schedule Appointment' parentid='content' tag='A' /&gt;" Guid="c90841dc-9779-4676-8361-857a8de4fc08" InformativeScreenshot="4fc611f3ed2239c9b6ffad5d3ce540e0.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/3Bj_o7SPvEePwJAF02QGuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" ContentHash="qK_z6N6-J0G_UNcK02M1aA" DesignTimeRectangle="1345, 584, 26, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" Guid="a2fda635-481f-4e05-b239-0a78d61ae18a" InformativeScreenshot="641c4dc578aaa4bf9430182aabe0005c.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/95bYiJQHT0WTfGf_35UDZA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" DesignTimeRectangle="1377, 584, 22, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl idx='2' tableRow='2' tag='I' /&gt;" Guid="d911ddf0-ae8f-48c9-b9e9-8ce5bdf8455f" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '15 Jul 20251000 AM - 1…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" ContentHash="gVtdbirGhUevOJQDe9HeGw" DesignTimeRectangle="336, 742, 280, 60" FullSelectorArgument="&lt;webctrl id='appointmentTable' tag='TABLE' /&gt;&lt;webctrl aaname='15 Jul 202510:00 AM - 1:00 AM' tag='DIV' /&gt;" Guid="41559435-7e15-4f6c-a305-6c6cc92fbfea" InformativeScreenshot="09ee4ceabdbe8e1caba8918eb7b955a6.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/WKRh0GvGcE6I9bJcD2KMMA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="5a186b22-eca1-4fd4-8c13-39d35ae71cb6" ContentHash="pf9uPIu_dkWS1riVxkpoOg" DesignTimeRectangle="334, 953, 96, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='selectAppointment' tag='BUTTON' /&gt;" Guid="cf0feeaf-336a-434f-8455-4c39f80439a3" InformativeScreenshot="e53a4ed124a4243362518c38ad7d1cb9.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/OnUxeKIlI0SCJb5cbv669g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Envío de correo y reporte." />
+            <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Tomamos los datos de la cita." />
+            <uix:NGetText DisplayName="Get Text 'Date: 15 Jul 2025, 10:0…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" TextString="[dia_de_cita]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="c853445f-012a-41f3-845c-c2b7f47fc601" ContentHash="EJvQS3RDAECskoLKJ_Ph-Q" DesignTimeRectangle="414, 635, 360, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='15 Jul 2025, 10:00 AM - 1:00 AM ' parentid='confirmAppointment' tag='SPAN' /&gt;" Guid="0e1529a4-02fb-45da-9b33-77ed8814261a" ImageBase64="" InformativeScreenshot="d10dde1fdc29b3b28cf2d8935207b2d1.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/07A9oaZC9USVTCbpDNNLBg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="c853445f-012a-41f3-845c-c2b7f47fc601" DesignTimeRectangle="359, 634, 1200, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='P' innertext=' Date:*' /&gt;" Guid="2ddfc916-1879-4625-a2c4-6bd78249c97f" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[picture_path]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">.screenshots\</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Patient Terrence Fairb…'" FileName="[picture_path+in_id+&quot;.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,265.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NTakeScreenshot.SavedTo>
+                <OutArgument x:TypeArguments="x:String">[picture_path]</OutArgument>
+              </uix:NTakeScreenshot.SavedTo>
+              <uix:NTakeScreenshot.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="dc19caee-301f-4b46-907a-bd67dd952c9e" ContentHash="JsznJKAhAE2FCevdiFVbdg" DesignTimeRectangle="353, 592, 1213, 349" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='DIV' /&gt;" Guid="770ddce6-6ad4-401b-b539-0fad709844c5" ImageBase64="" InformativeScreenshot="bcd38f4d83107c629ea0e820818c3977.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/FvZLBTJ_BkOfdJ_2c7bU2A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NTakeScreenshot.Target>
+            </uix:NTakeScreenshot>
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="c5810d39-4360-4d68-9062-9017c1b56681" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,404" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Cita Medicina General: &quot;+dia_de_cita]" To="[New String(){&quot;in_my_mail&quot;}]" UseConnectionService="True">
+              <uga:SendEmailConnections.ArgumentAttachments>
+                <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="0" />
+              </uga:SendEmailConnections.ArgumentAttachments>
+              <uga:SendEmailConnections.AttachmentsBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                      <x:Null />
+                    </scg:List>
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.AttachmentsBackup>
+              <uga:SendEmailConnections.InputTypeBackup>
+                <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:SendEmailConnections.InputTypeBackup>
+            </uga:SendEmailConnections>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Edge" ContentHash="iLLyssC7n0igKwKzqG0jGw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAC/klEQVQ4T23STUgUUQAH8H9EHdJK02dZGvb6IOiSFETZN3WpDLVtx3Ys2tWnVmb2QUaspDSraLW0zmaLhpXR+GZb+0CL8hYEUaciOhR06tQXOztbW5o18XS29tDhD3OY/4/3/jyUOm/jhWcjflXnwmRUJN9k9IjJ6IDJ6HOT0Wcmo7rJaK3JaI74x3LPw3DDaqCrA3BKYbS4fDDYIiTYfMTYwoDJqPW/xBit/15VgChbiI1tdUCwDZAlDSXOu2hytSPOKH5U5/fahVGT0bcmo+/ssjXmyT8RrypAUXs90HUOUJUJoEK6OY54XR2IswWXv7KCPpPR5Sajc0xGc01G145V5g3eOra+cYn/NHCpfaJsA7NkSfO7pP5rO5xDV4f3l221qmcn9/gbyz13stfrKEfoYhiqwqEqbVCVqQJwy5JmieyR+JAsaZMDFSdh1WSK00yUK/PwsWYRZgaa0xD0vYSqWHbWCeCGDfyWJW2DwxlBVXkvruw9jJh7CUYr8/CwYQ3KfDVAsFUc25MCNAlg2Aa+yJJWIPYolzgcjjt4eWwFVvoaMEmsnRxNVValAN0CeGQDUVnSqBh1W/ED9Jw6iDeRPAT7NmFqsAUIXAA62wRQlAKEBNCT3ECWtO3S7jB89V68ChViLJIGKzwN928Uwt1dgcVdxwG19WgKcEIAjiRQvlt/6pavT/l0cx5GItMR5TmIcoJRPWMccvfsmY3Oc+/tcgKqUiiANFnSal3O/uaS0nutj/1bpJGB9GkGJ0gmxrPxk2fkeHuLPej0e8fHU5V9UJVJ/x5SyT2cOXgWiUiGGuPZTwxOHAYnSw1OlhmceOI863WcZzeuD9UBgfP/HtKustvYWTKIpgM+RPtz8C2cGTQ4sewkDE5+iO8oJ9aInnkyqhMUhQ4BAT/Q2QG01DXj/NFGfNZyRVncuSUFSM1YlJPKhD4LH/rnoLR7PzaHaoHRgXSMDKTD1LOSd84wOJENTnoNToYNTh4anFw2OCk2OBnfJs6z8FufAUufgT+mbrwfWRx0CwAAAABJRU5ErkJggg==" InformativeScreenshot="0b01a9191034efd42e7de962d6042255.jpg" Reference="yo6pYHpOtEys6_EC7ZMvHA/SpJINnbTZ0Kvk3jCQbNvGg" Selector="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" Url="[in_paciente_panel]" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

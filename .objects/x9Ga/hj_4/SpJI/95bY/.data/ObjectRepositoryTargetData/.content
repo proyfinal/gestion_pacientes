@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qK_z6N6-J0G_UNcK02M1aA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" DesignTimeRectangle="1345, 584, 26, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" Guid="a2fda635-481f-4e05-b239-0a78d61ae18a" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" DesignTimeRectangle="1377, 584, 22, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl idx='2' tableRow='2' tag='I' /&gt;" Guid="d911ddf0-ae8f-48c9-b9e9-8ce5bdf8455f" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="641c4dc578aaa4bf9430182aabe0005c.png" xmlns="">0id2hJ0wKjk6FIU4WQckirA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

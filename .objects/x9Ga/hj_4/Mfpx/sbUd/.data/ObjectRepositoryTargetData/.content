@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="aqPIHJfU5EG0tPLRzmuoZQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="cWINkVjwokCoIvgR48SbQQ" Reference="yo6pYHpOtEys6_EC7ZMvHA/sbUdQHnKekaUvCgAOMiIvQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page" CVScreenId="9d31e395-0f64-4af3-b9ab-0088f1ce3972" DesignTimeRectangle="1458, 953, 95, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' /&gt;" Guid="c32fbc21-201c-4ae4-b2aa-f1309192f597" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
-      <imageRef attrName="InformativeScreenshot" originalValue="a55b0c236b39a0d78e5b2a9293e989b2.png" xmlns="">0cdTY6dpaJUG8nofaWRyNkA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page" CVScreenId="9d31e395-0f64-4af3-b9ab-0088f1ce3972" DesignTimeRectangle="1458, 953, 95, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' type='button' value='Save' /&gt;" Guid="c32fbc21-201c-4ae4-b2aa-f1309192f597" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="a55b0c236b39a0d78e5b2a9293e989b2.png" xmlns="">0isEfjolFXU2Ut9LrEW079Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">Click</x:String>
   </ObjectRepositoryTargetData.Data>

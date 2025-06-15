@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge OpenMRS Electronic Medical Record(3)",
+  "Type": "Screen",
+  "Id": "SpJINnbTZ0Kvk3jCQbNvGg",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/SpJINnbTZ0Kvk3jCQbNvGg",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/hj_4MJIjG0OkWY-C9oT6AA",
+  "Created": "2025-06-15T10:11:32.6809076Z",
+  "Updated": "2025-06-15T10:11:32.6809076Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
