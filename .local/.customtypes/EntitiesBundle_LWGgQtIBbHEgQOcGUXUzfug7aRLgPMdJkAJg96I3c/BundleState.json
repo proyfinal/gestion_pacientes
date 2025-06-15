@@ -36,13 +36,13 @@
         "assemblyName": "Studio.Generated.TypedDataTable4"
       }
     },
-    "Studio.Generated.TypedDataTable8": {
+    "Studio.Generated.TypedDataTable10": {
       "namespace": "System.Data",
       "providerName": "TypedDataTable",
       "key": {
-        "name": "Studio.Generated.TypedDataTable8",
-        "hash": "ReadRangeConnections\u00601_3|DataTable|gydZcLTPClndZSZOO09zK35pCdWZUx6fxDtygwFWM|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
-        "assemblyName": "Studio.Generated.TypedDataTable8"
+        "name": "Studio.Generated.TypedDataTable10",
+        "hash": "ReadRangeConnections\u00601_1|DataTable|qwlX8VMJavDrc78VRrE5AHV3vEMxb9b2pi0WVEOU1I|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
+        "assemblyName": "Studio.Generated.TypedDataTable10"
       }
     },
     "Studio.Generated.TypedDataTable7": {
@@ -52,6 +52,15 @@
         "name": "Studio.Generated.TypedDataTable7",
         "hash": "ReadRangeConnections\u00601_2|DataTable|gydZcLTPClndZSZOO09zK35pCdWZUx6fxDtygwFWM|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
         "assemblyName": "Studio.Generated.TypedDataTable7"
+      }
+    },
+    "Studio.Generated.TypedDataTable8": {
+      "namespace": "System.Data",
+      "providerName": "TypedDataTable",
+      "key": {
+        "name": "Studio.Generated.TypedDataTable8",
+        "hash": "ReadRangeConnections\u00601_3|DataTable|gydZcLTPClndZSZOO09zK35pCdWZUx6fxDtygwFWM|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
+        "assemblyName": "Studio.Generated.TypedDataTable8"
       }
     },
     "Studio.Generated.TypedDataTable5": {
@@ -81,13 +90,13 @@
         "assemblyName": "Studio.Generated.TypedDataTable3"
       }
     },
-    "Studio.Generated.TypedDataTable10": {
+    "Studio.Generated.TypedDataTable11": {
       "namespace": "System.Data",
       "providerName": "TypedDataTable",
       "key": {
-        "name": "Studio.Generated.TypedDataTable10",
-        "hash": "ReadRangeConnections\u00601_1|DataTable|qwlX8VMJavDrc78VRrE5AHV3vEMxb9b2pi0WVEOU1I|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
-        "assemblyName": "Studio.Generated.TypedDataTable10"
+        "name": "Studio.Generated.TypedDataTable11",
+        "hash": "ReadRangeConnections\u00601_1|DataTable|QrNAbkCVSl5byarZCddsGPUDOr9rVWhoZuyb26H8zU|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng",
+        "assemblyName": "Studio.Generated.TypedDataTable11"
       }
     }
   }
