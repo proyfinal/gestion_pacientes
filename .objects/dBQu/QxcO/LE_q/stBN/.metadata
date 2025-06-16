@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Blood Pressure(1)",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "stBNGsSeWUiVXqdrSyj4Cg",
+  "Reference": "yo6pYHpOtEys6_EC7ZMvHA/stBNGsSeWUiVXqdrSyj4Cg",
+  "ParentRef": "yo6pYHpOtEys6_EC7ZMvHA/LE_qGytH0k-cv2P1GSSUfQ",
+  "Created": "2025-06-15T16:38:30.7979613Z",
+  "Updated": "2025-06-15T16:38:30.7979613Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

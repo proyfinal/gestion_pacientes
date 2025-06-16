@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RLtma2ibVkmjQaIXZyHl9A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithSimpleUi.page" CVScreenId="edc27bcd-0288-40c5-902f-dea4da8747aa" CvElementArea="722, 449, 76, 37" CvType="InputBox" DesignTimeRectangle="723, 451, 73, 34" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='w8' tag='INPUT' type='text' class='number numeric-range focused' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="158f4b1c-f1b4-4651-b7ac-e881ade0eed8" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="edc27bcd-0288-40c5-902f-dea4da8747aa" DesignTimeRectangle="718, 413, 703, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='vitals' tag='H3' type='' class='' aaname='Height (cm)' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Height (cm)' /&gt;" Guid="770cb2ba-d713-4842-add9-d96c920d30ff" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="becc103d980c21306c34da962560d29a.png" xmlns="">0EUKwkxidrkmn9CKST_RVEw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

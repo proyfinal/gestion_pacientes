@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="coger_cita" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="coger_cita" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_my_mail" Type="InArgument(x:String)" />
     <x:Property Name="in_id" Type="InArgument(x:String)" />
@@ -129,33 +129,38 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Azure</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="coger_cita" sap:VirtualizedContainerService.HintSize="921.2,2602.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="coger_cita" sap:VirtualizedContainerService.HintSize="1375,3150" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="500.8,2579.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record(3)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,3127" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,2339.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,2887" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="dia_de_cita" />
-              <Variable x:TypeArguments="x:String" Name="picture_path" />
+              <Variable x:TypeArguments="sd:Image" Name="picture_path" />
               <Variable x:TypeArguments="ui:Image" Name="image" />
               <Variable x:TypeArguments="x:String" Name="img_body" />
+              <Variable x:TypeArguments="ui:Image" Name="Imagepath" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="e2482458-3a67-47e5-bf78-7ae0c091add6" ContentHash="Hy1HzY2CDE2Mydr6YdFbFg" DesignTimeRectangle="1456, 487, 67, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Actions ' parentid='content' tag='SPAN' /&gt;" Guid="408317aa-e350-47a9-9d74-9c164a82c937" InformativeScreenshot="54ff50ba8d9b9469763d93823e035062.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/-JuFc25sdUabkLOKwFwjlQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -170,7 +175,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Schedule Appointment'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Schedule Appointment'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/patientdashboard/patientDashboard.page" CVScreenId="84697b59-a6c7-4f97-90c5-debf3a7bb42c" ContentHash="gpZX1Re_70qHBKEqyD-U5g" DesignTimeRectangle="14, 159, 0, 0" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Schedule Appointment' parentid='content' tag='A' /&gt;" Guid="c90841dc-9779-4676-8361-857a8de4fc08" InformativeScreenshot="4fc611f3ed2239c9b6ffad5d3ce540e0.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/3Bj_o7SPvEePwJAF02QGuQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -185,11 +190,11 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" ContentHash="qK_z6N6-J0G_UNcK02M1aA" DesignTimeRectangle="1345, 584, 26, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='I' /&gt;" Guid="a2fda635-481f-4e05-b239-0a78d61ae18a" InformativeScreenshot="641c4dc578aaa4bf9430182aabe0005c.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/95bYiJQHT0WTfGf_35UDZA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="a2e77ea6-4422-4f63-bb6a-4582aeb17603" DesignTimeRectangle="1377, 584, 22, 28" FullSelectorArgument="&lt;webctrl parentid='appointmentscheduling-patientAppointmentRequests' tag='TABLE' /&gt;&lt;webctrl idx='2' tableRow='2' tag='I' /&gt;" Guid="d911ddf0-ae8f-48c9-b9e9-8ce5bdf8455f" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -206,9 +211,9 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '15 Jul 20251000 AM - 1…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '15 Jul 20251000 AM - 1…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" ContentHash="gVtdbirGhUevOJQDe9HeGw" DesignTimeRectangle="336, 742, 280, 60" FullSelectorArgument="&lt;webctrl id='appointmentTable' tag='TABLE' /&gt;&lt;webctrl aaname='15 Jul 202510:00 AM - 1:00 AM' tag='DIV' /&gt;" Guid="41559435-7e15-4f6c-a305-6c6cc92fbfea" InformativeScreenshot="09ee4ceabdbe8e1caba8918eb7b955a6.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/WKRh0GvGcE6I9bJcD2KMMA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="a2a68b87-c5c8-4ecd-a59e-14547e1fac59" ContentHash="d9zDDm2mvkykn4uffERl1g" DesignTimeRectangle="910, 860, 224, 50" FuzzySelectorArgument="&lt;webctrl id='appointmentTable' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' class='ngCellText ng-scope col2 colt2' tag='DIV' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Inpatient Ward' /&gt;" Guid="f0db099f-c69f-4dd0-a8c3-49f689fea461" InformativeScreenshot="8ed505a2a3b04a9ae137ca8a6da0ec31.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/WKRh0GvGcE6I9bJcD2KMMA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -221,7 +226,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Next'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="5a186b22-eca1-4fd4-8c13-39d35ae71cb6" ContentHash="pf9uPIu_dkWS1riVxkpoOg" DesignTimeRectangle="334, 953, 96, 46" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='selectAppointment' tag='BUTTON' /&gt;" Guid="cf0feeaf-336a-434f-8455-4c39f80439a3" InformativeScreenshot="e53a4ed124a4243362518c38ad7d1cb9.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/OnUxeKIlI0SCJb5cbv669g" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NClick.Target>
@@ -236,38 +241,77 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Envío de correo y reporte." />
-            <ui:Comment sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Tomamos los datos de la cita." />
-            <uix:NGetText DisplayName="Get Text 'Date: 15 Jul 2025, 10:0…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" TextString="[dia_de_cita]" Version="V4">
+            <ui:Comment sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Envío de correo y reporte." />
+            <ui:Comment sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Tomamos los datos de la cita." />
+            <uix:NGetText DisplayName="Get Text 'Date: 15 Jul 2025, 10:0…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" TextString="[dia_de_cita]" Version="V4">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="c853445f-012a-41f3-845c-c2b7f47fc601" ContentHash="EJvQS3RDAECskoLKJ_Ph-Q" DesignTimeRectangle="414, 635, 360, 34" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='15 Jul 2025, 10:00 AM - 1:00 AM ' parentid='confirmAppointment' tag='SPAN' /&gt;" Guid="0e1529a4-02fb-45da-9b33-77ed8814261a" ImageBase64="" InformativeScreenshot="d10dde1fdc29b3b28cf2d8935207b2d1.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/07A9oaZC9USVTCbpDNNLBg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                      <uix:Target CVScreenId="c853445f-012a-41f3-845c-c2b7f47fc601" DesignTimeRectangle="359, 634, 1200, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='P' innertext=' Date:*' /&gt;" Guid="2ddfc916-1879-4625-a2c4-6bd78249c97f" SearchSteps="Selector" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="9fbb35aa-dfbe-433e-b3f9-da38ea71bd8f" ContentHash="DuXX86UYQ0238gXhFEdTqA" DesignTimeRectangle="532, 514, 286, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='16 Jul 2025, 8:00 AM - 11:00 PM ' parentid='confirmAppointment' tag='SPAN' /&gt;" Guid="d658d46e-e275-413c-b1e6-5fe6b0ab64dd" ImageBase64="" InformativeScreenshot="9b78bbefde4f30121cbec729e85237e8.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/07A9oaZC9USVTCbpDNNLBg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[picture_path]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">.screenshots\</InArgument>
-              </Assign.Value>
-            </Assign>
-            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Patient Terrence Fairb…'" FileName="[picture_path+in_id+&quot;.png&quot;]" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="433.6,265.6" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="sd:Image">[picture_path]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:Image">[".screenshots\"]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Patient Terrence Fairb…'" FileNameMode="None" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,215" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[picture_path]" SaveScreenshotTo="Image" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
               <uix:NTakeScreenshot.SavedTo>
-                <OutArgument x:TypeArguments="x:String">[picture_path]</OutArgument>
+                <OutArgument x:TypeArguments="sd:Image">[picture_path]</OutArgument>
               </uix:NTakeScreenshot.SavedTo>
               <uix:NTakeScreenshot.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="dc19caee-301f-4b46-907a-bd67dd952c9e" ContentHash="JsznJKAhAE2FCevdiFVbdg" DesignTimeRectangle="353, 592, 1213, 349" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='DIV' /&gt;" Guid="770ddce6-6ad4-401b-b539-0fad709844c5" ImageBase64="" InformativeScreenshot="bcd38f4d83107c629ea0e820818c3977.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/FvZLBTJ_BkOfdJ_2c7bU2A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
               </uix:NTakeScreenshot.Target>
             </uix:NTakeScreenshot>
-            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" ConnectionId="c5810d39-4360-4d68-9062-9017c1b56681" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,404" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Cita Medicina General: &quot;+dia_de_cita]" To="[New String(){&quot;in_my_mail&quot;}]" UseConnectionService="True">
+            <ui:SaveImage DisplayName="Save Image" FileName="[&quot;C:\Download\Paciente_&quot;+in_id+&quot;.png&quot;]" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[picture_path]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:Image">[Imagepath]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:Image">[Directory.GetFiles("C:\Download", "Paciente_*.png")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Builder" AuthScopesInvalid="False" Body="[string.Format(&quot;&lt;P&gt;&lt;SPAN&gt;&amp;lt;img src=&amp;quot;C:\Download\Paciente_&amp;quot; alt=&amp;quot;Imagen L&amp;quot; width=&amp;quot;500&amp;quot;&amp;gt;&lt;/SPAN&gt;&lt;/P&gt;&quot;)]" ConnectionId="c5810d39-4360-4d68-9062-9017c1b56681" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,509" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[&quot;Cita Medicina General: &quot;+dia_de_cita]" To="[New String(){&quot;dfairbrace2@narod.ru&quot;}]" UseConnectionService="True">
               <uga:SendEmailConnections.ArgumentAttachments>
-                <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="0" />
+                <scg:List x:TypeArguments="InArgument(upr:IResource)" Capacity="4">
+                  <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath("C:\\Download\\Paciente_"+in_id+".png")]</InArgument>
+                </scg:List>
               </uga:SendEmailConnections.ArgumentAttachments>
               <uga:SendEmailConnections.AttachmentsBackup>
                 <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="Builder">
@@ -281,11 +325,89 @@
               <uga:SendEmailConnections.InputTypeBackup>
                 <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
                   <usau:BackupSlot.BackupValues>
-                    <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                    <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+                      <InArgument x:TypeArguments="x:String">[string.Format("&lt;P&gt;&lt;SPAN&gt;GeneradaSu nueva Cita Para Medicina General.&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Revise La Imagen Adjunta&lt;/SPAN&gt;&lt;/P&gt;")]</InArgument>
+                    </scg:List>
+                    <scg:List x:TypeArguments="x:Object" x:Key="TEXT" Capacity="1">
+                      <x:Null />
+                    </scg:List>
                   </usau:BackupSlot.BackupValues>
                 </usau:BackupSlot>
               </uga:SendEmailConnections.InputTypeBackup>
             </uga:SendEmailConnections>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f5870aa7-87fa-4a38-b817-e3fed4c4c2e8" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="cb4d83d9-0854-4460-9c32-e18b57cdf82e" ContentHash="93TJBdORVEui_l1He5hf1w" DesignTimeRectangle="1361, 764, 77, 37" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='                     Save' parentid='confirmAppointment' tag='BUTTON' /&gt;" Guid="dbcf7758-3a1b-4c54-84af-265a8e7e99d4" InformativeScreenshot="cea4ae69bdd6825111700de304b8b49e.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/4jxCyWZg8keYmDE3sOnRGA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,223" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V4">
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,50" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,283" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,223" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" Version="V4">
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
