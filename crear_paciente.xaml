@@ -142,17 +142,13 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="crear_paciente" sap:VirtualizedContainerService.HintSize="921.2,10278.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="crear_paciente" sap:VirtualizedContainerService.HintSize="1010.8000000000001,10628.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="id" />
       <Variable x:TypeArguments="x:String" Name="byear" />
       <Variable x:TypeArguments="x:String" Name="bmonth" />
       <Variable x:TypeArguments="x:String" Name="bday" />
-      <Variable x:TypeArguments="x:Int32" Name="count">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -160,6 +156,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="571.2,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Navegar a crear paciente." />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Registrando paciente: &quot;+in_last_name+&quot;,&quot;+in_first_name]" />
     <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Home" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="571.2,528.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="1c24c435-bd72-4e45-9e90-58bed70dd315" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -195,13 +192,13 @@
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
     <ui:Comment sap:VirtualizedContainerService.HintSize="571.2,88" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Añadimos registro." />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="571.2,9445.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge OpenMRS Electronic Medical Record" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="571.2,9621.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="537.6,9196.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="537.6,9372.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="id" />
             </Sequence.Variables>
@@ -269,7 +266,7 @@
               </uix:NClick.VerifyOptions>
             </uix:NClick>
             <ui:Comment sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// Evaluar Género." />
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[in_genero]" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Importando datos de paciente&quot;]" />
             <ui:Comment sap:VirtualizedContainerService.HintSize="504,107.2" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// Nota: Hacer evento hardware para click desplegable." />
             <If Condition="[in_genero = &quot;V&quot;]" sap:VirtualizedContainerService.HintSize="504,692" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
@@ -704,6 +701,7 @@
                 </ActivityAction>
               </ui:ForEachRow.Body>
             </ui:ForEachRow>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="504,176" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Iniciando consulta virtual&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Start Visit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6c6c1a02-f336-4250-85cd-f1b34ab3ec2e" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="o2.openmrs.org/openmrs/coreapps/clinicianfacing/patient.page" CVScreenId="a32d24d4-ce5f-4f81-ad23-4a1395b5b0af" ContentHash="FP5wF8rvQU-5UJHD5pxzBw" DesignTimeRectangle="1312, 487, 260, 31" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='                                                     Start Visit                                                 ' parentid='org.openmrs.module.coreapps.createVisit' tag='DIV' /&gt;" Guid="b9af4d6e-f09f-40c5-bb8e-79c3f13f81ff" InformativeScreenshot="bc45e3680ce6b81ebd3ddafc4cf6e367.png" Reference="yo6pYHpOtEys6_EC7ZMvHA/_Es8m7BlvkuDNvL_bMaiXQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
