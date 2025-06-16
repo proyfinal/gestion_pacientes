@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LJW-4dpC-U2IlI4Vr5WFzw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithSimpleUi.page" CVScreenId="ad3a5ef5-882f-45da-a789-916a6f3efe09" CvElementArea="721, 449, 76, 36" CvType="InputBox" DesignTimeRectangle="723, 451, 73, 34" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='w12' tag='INPUT' type='text' class='number numeric-range focused' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="18288ded-5cff-4118-b1a4-3751fc4115ad" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ad3a5ef5-882f-45da-a789-916a6f3efe09" DesignTimeRectangle="718, 413, 703, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='vitals' tag='H3' class='' aaname='Temperature (c)' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Temperature (c)' /&gt;" Guid="be510674-e5fb-47c4-9546-95b7ade41d8f" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a1adfa2dee42acf0963f719cf9518515.png" xmlns="">0O2M54t1SwkCAkvH6EbOEOQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

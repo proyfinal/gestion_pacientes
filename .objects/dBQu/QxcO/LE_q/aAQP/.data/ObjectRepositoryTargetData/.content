@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OlJh6sYj8Uu35ceB2YQhRQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs/htmlformentryui/htmlform/enterHtmlFormWithSimpleUi.page" CVScreenId="927e5dcb-5468-4b14-93c9-bcf3b93c71ae" CvElementArea="722, 449, 76, 37" CvType="InputBox" DesignTimeRectangle="723, 451, 73, 34" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='w10' tag='INPUT' type='text' class='number numeric-range focused' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="54172800-5cee-4de5-83cd-e059c32dcab5" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="927e5dcb-5468-4b14-93c9-bcf3b93c71ae" DesignTimeRectangle="718, 413, 703, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='vitals' tag='H3' class='' aaname='Weight (kg)' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Weight (kg)' /&gt;" Guid="9978cc04-ef09-403d-942e-74126e21c95d" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8ba5a4abee28c5ad40561b1dff5b5f1c.png" xmlns="">0ptbKA2TUBU2bv4ZQmhxz4A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

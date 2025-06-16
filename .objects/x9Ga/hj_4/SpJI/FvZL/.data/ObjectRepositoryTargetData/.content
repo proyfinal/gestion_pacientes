@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JsznJKAhAE2FCevdiFVbdg" Reference="yo6pYHpOtEys6_EC7ZMvHA/FvZLBTJ_BkOfdJ_2c7bU2A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="dc19caee-301f-4b46-907a-bd67dd952c9e" DesignTimeRectangle="353, 592, 1213, 349" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='DIV' /&gt;" Guid="770ddce6-6ad4-401b-b539-0fad709844c5" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="bcd38f4d83107c629ea0e820818c3977.png" xmlns="">0K9qHyaR7T0uF8YEudIo-5g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TakeScreenshot</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

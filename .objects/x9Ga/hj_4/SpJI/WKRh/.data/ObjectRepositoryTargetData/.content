@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="d9zDDm2mvkykn4uffERl1g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="a2a68b87-c5c8-4ecd-a59e-14547e1fac59" DesignTimeRectangle="910, 860, 224, 50" FuzzySelectorArgument="&lt;webctrl id='appointmentTable' tag='TABLE' matching:id='fuzzy' fuzzylevel:id='0.0' /&gt;&lt;webctrl type='' class='ngCellText ng-scope col2 colt2' tag='DIV' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Inpatient Ward' /&gt;" Guid="f0db099f-c69f-4dd0-a8c3-49f689fea461" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="FuzzySelector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="8ed505a2a3b04a9ae137ca8a6da0ec31.png" xmlns="">0kTnYrxJdeUGC2T2SnKB5VQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

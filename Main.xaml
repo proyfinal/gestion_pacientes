@@ -115,8 +115,9 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="921.2,952" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1375,1663" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="paciente_panel" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_pacientes" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_config" />
       <Variable x:TypeArguments="ss:SecureString" Name="pass" />
@@ -127,8 +128,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Recordad: Volver al dashboard en cada secuencia." />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="extraer_datos - Invoke Workflow File (extraer_datos.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="extraer_datos.xaml">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,107" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Recordad: Volver al dashboard en cada secuencia." />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="extraer_datos - Invoke Workflow File (extraer_datos.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="extraer_datos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_pass">[pass]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_user">[user]</OutArgument>
@@ -136,15 +137,15 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_pacientes">[dt_pacientes]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login_openmrs - Invoke Workflow File (login_openmrs.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="login_openmrs.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login_openmrs - Invoke Workflow File (login_openmrs.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="login_openmrs.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_pass">[pass]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_user">[user]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_login_url">[dt_config.Rows(0)("VALUE").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="416,126.4" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//A partir de aqui, ya está la sesión iniciada y preparada para meter datos. Dejar en este estado cada  vez que se termina una acción." />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="crear_paciente - Invoke Workflow File (crear_paciente.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="crear_paciente.xaml">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,126" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//A partir de aqui, ya está la sesión iniciada y preparada para meter datos. Dejar en este estado cada  vez que se termina una acción." />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="crear_paciente - Invoke Workflow File (crear_paciente.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="crear_paciente.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_id_pacientes">[dt_pacientes]</OutArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_pacientes">[dt_pacientes]</InArgument>
@@ -160,7 +161,39 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_dashboard_url">[dt_config.Rows(1)("VALUE").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="visit_note - Invoke Workflow File (visit_note.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="visit_note.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="visit_note - Invoke Workflow File (visit_note.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="visit_note.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_paciente_panel">[paciente_panel]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_diag">[dt_pacientes.Rows(2)("Enfermedad").ToString()]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Capture_vitals - Invoke Workflow File (Capture_vitals.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Capture_vitals.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="out_paciente_panel">[paciente_panel]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_O2">[dt_pacientes.Rows(2)("Saturación O2").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Dys">[dt_pacientes.Rows(2)("Dys").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Sys">[dt_pacientes.Rows(2)("Sys").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_RespMin">[dt_pacientes.Rows(2)("Respiraciones/min").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Pulso">[dt_pacientes.Rows(2)("Pulso").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Temp">[dt_pacientes.Rows(2)("Temperatura").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Peso">[dt_pacientes.Rows(2)("Peso").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_Altura">[dt_pacientes.Rows(2)("Altura").ToString()]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="solicitar_cita - Invoke Workflow File (solicitar_cita.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="solicitar_cita.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_paciente_panel">[paciente_panel]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_estado">[dt_pacientes.Rows(2)("Estado Crónico").ToString()]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="coger_cita - Invoke Workflow File (coger_cita.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="coger_cita.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_my_mail">giograyhatter@gmail.com</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_id">[dt_pacientes.Rows(2)("id").ToString()]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_paciente_panel">[paciente_panel]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="End_Visit - Invoke Workflow File (End_Visit.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="End_Visit.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1OfK70Y_hESM_hP2qyVVtg" Reference="yo6pYHpOtEys6_EC7ZMvHA/07A9oaZC9USVTCbpDNNLBg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="o2.openmrs.org/openmrs//appointmentschedulingui/manageAppointments.page" CVScreenId="9fbb35aa-dfbe-433e-b3f9-da38ea71bd8f" DesignTimeRectangle="532, 514, 286, 27" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='confirmAppointment' tag='SPAN' visibleinnertext='* Jun 2025, 8:00 AM - 11:00 PM' /&gt;" Guid="d658d46e-e275-413c-b1e6-5fe6b0ab64dd" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='OpenMRS Electronic Medical Record' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="9b78bbefde4f30121cbec729e85237e8.png" xmlns="">0TWT1JsF3rkOHRbzXBbVb-w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
