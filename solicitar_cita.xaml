@@ -106,7 +106,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="solicitar_cita" sap:VirtualizedContainerService.HintSize="925.2000000000002,3416.7999999999997" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="solicitar_cita" sap:VirtualizedContainerService.HintSize="1010.8000000000001,3416.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="is_cron" />
     </Sequence.Variables>
@@ -115,7 +115,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Paciente panel at: &quot;+in_paciente_panel]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Solicitando cita previa&quot;]" />
     <ui:Comment sap:VirtualizedContainerService.HintSize="571.2,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Evaluar si es enfermedad cónica o no" />
     <If Condition="[in_estado = &quot;Si&quot;]" sap:VirtualizedContainerService.HintSize="571.2,468" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
@@ -180,11 +180,7 @@
                 </ActivityAction.Argument>
                 <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="502.4,1920" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:Int32" Name="count">
-                      <Variable.Default>
-                        <Literal x:TypeArguments="x:Int32" />
-                      </Variable.Default>
-                    </Variable>
+                    <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -244,7 +240,7 @@
                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="468.8,541.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[count &lt;= 1]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="468.8,541.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
                     <ui:InterruptibleDoWhile.Body>
                       <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,411.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
@@ -274,9 +270,6 @@
                         </Assign>
                       </Sequence>
                     </ui:InterruptibleDoWhile.Body>
-                    <ui:InterruptibleDoWhile.Condition>
-                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="count &lt;= 1" />
-                    </ui:InterruptibleDoWhile.Condition>
                   </ui:InterruptibleDoWhile>
                   <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="468.8,246.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][k(enter)][u(hk)]" Version="V4">
                     <uix:NKeyboardShortcuts.VerifyOptions>
